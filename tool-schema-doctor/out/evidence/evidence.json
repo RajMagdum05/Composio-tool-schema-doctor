@@ -86,14 +86,14 @@
   "gemini_enum_example": "GITHUB_ACTIVITY_LIST_REPO_S_STARRED_BY_AUTHENTICATED_USER",
   "tests": {
     "exit_code": 0,
-    "seconds": 87.6,
+    "seconds": 94.0,
     "junit_file": "out/evidence/test-results.xml",
-    "last_line": "59 passed, 2 warnings in 82.66s (0:01:22)",
-    "tests": 59,
+    "last_line": "63 passed, 2 warnings in 86.61s (0:01:26)",
+    "tests": 63,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "passed": 59,
+    "passed": 63,
     "cases": [
       "tests.test_cli::test_inspect",
       "tests.test_cli::test_lint",
@@ -153,7 +153,11 @@
       "tests.test_loader::test_load_roundtrip",
       "tests.test_report::test_report_renders_unicode_without_crashing",
       "tests.test_report::test_report_failing_conversions_table",
-      "tests.test_report::test_catalog_source_skips_compat"
+      "tests.test_report::test_catalog_source_skips_compat",
+      "tests.test_static::test_builds_a_self_contained_page",
+      "tests.test_static::test_matches_the_streamlit_dashboard",
+      "tests.test_static::test_every_evidence_link_resolves_and_the_lookup_data_is_complete",
+      "tests.test_static::test_nothing_personal_or_secret_is_published"
     ]
   },
   "causes": {

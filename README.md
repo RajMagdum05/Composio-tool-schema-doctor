@@ -20,6 +20,17 @@ Each finding opens to its evidence: the affected tools, the raw adapter errors, 
 upstream code at the pinned commit, the exact CLI command with its verbatim output, and the
 regression tests that pin it.
 
+### Host it
+Two forms of the same page, built from the same saved evidence and the same `theme.css`:
+
+| Form | For | How |
+|---|---|---|
+| **Static site** in `site/` | Netlify, Vercel, GitHub Pages, any file host | `python tool-schema-doctor/build_static.py`, then publish `site/` (configs: `netlify.toml`, `vercel.json`) |
+| **Streamlit app** | Streamlit Community Cloud, or locally | `streamlit run tool-schema-doctor/streamlit_app.py` |
+
+Streamlit needs a running Python server, so it can't run on Netlify or Vercel. The static site has the
+same findings and evidence, plus a lookup for any of the 930 tools in plain JavaScript.
+
 ### Findings at a glance
 | Finding | Status on Composio `next` |
 |---|---|

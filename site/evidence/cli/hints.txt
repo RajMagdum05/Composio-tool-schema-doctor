@@ -1,0 +1,2020 @@
+{
+  "input": "composio-upstream/ts/packages/cli/test/__mocks__/tools.json",
+  "source": "mock",
+  "tools": 930,
+  "summary": {
+    "total": 239,
+    "by_rule": {
+      "missing-action-hint": 227,
+      "destructive-verb-without-destructive-hint": 12
+    },
+    "by_severity": {
+      "warning": 227,
+      "info": 12
+    }
+  },
+  "skipped_rules": {},
+  "findings": [
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CONFIGURE_JITRUNNER_FOR_ORG",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_AUTOLINK_REFERENCE_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ENVIRONMENT_VARIABLE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ISSUE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ISSUE_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ORGANIZATION_PROJECT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ORGANIZATION_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ORGANIZATION_VARIABLE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_AN_ORGANIZATION_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_BLOB",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_CHECK_RUN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_CHECK_SUITE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_CODESPACE_FOR_THE_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_CODESPACE_FROM_A_PULL_REQUEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_CODESPACE_IN_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_COMMIT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_COMMIT_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_COMMIT_STATUS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_CUSTOM_ORGANIZATION_ROLE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_DEPLOYMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_DEPLOYMENT_BRANCH_POLICY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_DEPLOYMENT_STATUS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_DEPLOY_KEY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_DISCUSSION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_DISCUSSION_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_FORK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_GIST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_GIST_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_GITHUB_APP_FROM_A_MANIFEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_GITHUB_PAGES_DEPLOYMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_GITHUB_PAGES_SITE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_LABEL",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_MILESTONE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_PROJECT_CARD",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_PROJECT_COLUMN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_PULL_REQUEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REFERENCE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REGISTRATION_TOKEN_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REGISTRATION_TOKEN_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_RELEASE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REMOVE_TOKEN_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REMOVE_TOKEN_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPLY_FOR_A_REVIEW_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_DISPATCH_EVENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_FOR_THE_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_FROM_AN_UNPUBLISHED_CODESPACE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_PROJECT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_RULESET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_USING_A_TEMPLATE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_VARIABLE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REPOSITORY_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REVIEW_COMMENT_FOR_A_PULL_REQUEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_REVIEW_FOR_A_PULL_REQUEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_SCOPED_ACCESS_TOKEN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_SNAPSHOT_OF_DEPENDENCIES_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_TAG_OBJECT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_TAG_PROTECTION_STATE_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_TEAM",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_TREE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_USER_PROJECT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_A_WORKFLOW_DISPATCH_EVENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_COMMIT_SIGNATURE_PROTECTION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_DEPLOYMENT_PROTECTION_RULE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_JIT_RUNNER_CONFIG",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_AN_ENVIRONMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_AN_ENVIRONMENT_SECRET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_AN_ORGANIZATION_SECRET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_A_CUSTOM_PROPERTY_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_A_REPOSITORY_SECRET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_CUSTOM_PROPERTIES_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_FILE_CONTENTS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_OR_UPDATE_REPO_SECRET_WITH_ENCRYPTED_VALUE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_AN_ISSUE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_AN_ISSUE_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_A_COMMIT_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_A_PULL_REQUEST_REVIEW_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_A_RELEASE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_A_TEAM_DISCUSSION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_REACTION_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CREATE_UPDATE_ORG_SECRET_WITH_LIB_SODIUM",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_CUSTOM_OIDCSUBJECT_CLAIM_TEMPLATE_SETTER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ENABLE_PRIVATE_VULNERABILITY_REPORTING_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_FORK_A_GIST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_GIST_S_CREATE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_GIST_S_LIST_PUBLIC",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_GITHUB_SET_REPO_RUNNER_LABELS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ISSUES_CREATE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ISSUES_CREATE_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ISSUES_GET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ISSUES_LIST_ASSIGN_EES",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ISSUES_LIST_EVENTS_FOR_REPO",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_ISSUES_LIST_FOR_REPO",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_LOCK_AN_ISSUE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MANAGE_ACCESS_CONTROL_FOR_ORGANIZATION_CODESPACES",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MANAGE_CUSTOM_PROPERTIES_FOR_ORG_REPOS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MAP_A_COMMIT_AUTHOR",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MARK_A_THREAD_AS_READ",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MARK_NOTIFICATIONS_AS_READ",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MARK_REPOSITORY_NOTIFICATIONS_AS_READ",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_META_ROOT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MOVE_A_PROJECT_CARD",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_MOVE_A_PROJECT_COLUMN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PING_AN_ORGANIZATION_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PING_A_REPOSITORY_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PRIVATELY_REPORT_A_SECURITY_VULNERABILITY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PULLS_CHECK_IF_MERGED",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PULLS_CREATE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PULLS_CREATE_REVIEW",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PULLS_CREATE_REVIEW_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PULLS_GET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_PULLS_LIST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REDELIVER_A_DELIVERY_FOR_AN_ORGANIZATION_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REDELIVER_A_DELIVERY_FOR_A_REPOSITORY_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_CREATE_FORK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_CREATE_FOR_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_CREATE_IN_ORG",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_CREATE_OR_UPDATE_FILE_CONTENTS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_GET_CODE_FREQUENCY_STATS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_GET_COMMIT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_GET_CONTENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_BRANCHES",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_COLLABORATORS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_COMMITS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_CONTRIBUTORS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_FOR_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_FOR_ORG",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REPO_S_LIST_FOR_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REQUEST_A_GITHUB_PAGES_BUILD",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REQUEST_REVIEWERS_FOR_A_PULL_REQUEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REREQUEST_A_CHECK_SUITE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESET_A_TOKEN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESTORE_A_PACKAGE_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESTORE_A_PACKAGE_FOR_A_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESTORE_A_PACKAGE_FOR_THE_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESTORE_A_PACKAGE_VERSION_FOR_THE_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESTORE_PACKAGE_VERSION_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RESTORE_PACKAGE_VERSION_FOR_A_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_REVIEW_DEPLOYMENT_PROTECTION_RULES",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RE_RUN_A_JOB_FROM_A_WORKFLOW_RUN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RE_RUN_A_WORKFLOW",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_RE_RUN_FAILED_JOBS_FROM_A_WORKFLOW_RUN",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SEARCH_REPO_S",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SECURITY_ADVISORIES_LIST_GLOBAL_ADVISORIES",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_ADMIN_BRANCH_PROTECTION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_A_REPOSITORY_SUBSCRIPTION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_A_THREAD_SUBSCRIPTION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_DEFAULT_WORKFLOW_PERMISSIONS_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_GITHUB_ACTIONS_PERMISSIONS_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_GITHUB_ACTIONS_PERMISSIONS_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_INTERACTION_RESTRICTIONS_FOR_AN_ORGANIZATION",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_INTERACTION_RESTRICTIONS_FOR_A_REPOSITORY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_ORG_ALLOWED_ACTIONS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_ORG_RUNNER_LABELS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_PRIMARY_EMAIL_VISIBILITY_FOR_THE_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_REPO_ALLOWED_ACTIONS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_SELECTED_REPOSITORIES_FOR_AN_ORGANIZATION_SECRET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_SELECTED_REPOSITORIES_FOR_AN_ORGANIZATION_VARIABLE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_SELECTED_REPOSITORIES_FOR_A_USER_SECRET",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_STATUS_CHECK_CONTEXTS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SET_WORKFLOW_EXTERNAL_ACCESS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_START_A_CODESPACE_FOR_THE_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_STAR_A_GIST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['idempotentHint', 'openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_SUBMIT_A_REVIEW_FOR_A_PULL_REQUEST",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_TEST_THE_PUSH_REPOSITORY_WEBHOOK",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_UPLOAD_AN_ANALYSIS_AS_SARIF_DATA",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_USERS_GET_AUTHENTICATED",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_USERS_GET_BY_USERNAME",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_USERS_GET_CONTEXT_FOR_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_USERS_LIST_FOLLOWERS_FOR_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_USERS_LIST_PUBLIC_EMAILS_FOR_AUTHENTICATED_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GITHUB_USERS_LIST_SOCIAL_ACCOUNTS_FOR_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GITHUB",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_COPY_FILE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_DRIVE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_FILE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_FILE_FROM_TEXT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_FOLDER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_REPLY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_CREATE_SHORTCUT_TO_FILE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_DELETE_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_DELETE_REPLY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_GET_REPLY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_LIST_REPLIES_TO_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_UPDATE_COMMENT",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_UPDATE_REPLY",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLEDRIVE_UPLOAD_FILE",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLEDRIVE",
+      "field_path": null,
+      "evidence": "tags=['openWorldHint']",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_ADD_USER_ALIAS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_ADD_USER_TO_GROUP",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_CREATE_GROUP",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_CREATE_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_DELETE_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_GET_GROUP",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_GET_USER",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_LIST_GROUPS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_LIST_GROUP_MEMBERS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_LIST_USERS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_REMOVE_USER_ALIAS",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    },
+    {
+      "rule_id": "missing-action-hint",
+      "severity": "warning",
+      "slug": "GOOGLE_ADMIN_REMOVE_USER_FROM_GROUP",
+      "message": "tool has no action hint (readOnly/create/update/destructive)",
+      "toolkit": "GOOGLE",
+      "field_path": null,
+      "evidence": "tags=none of the hint tags",
+      "remediation": "add the hint matching the tool's effect, e.g. createHint for a create action"
+    }
+  ],
+  "truncated": true
+}
