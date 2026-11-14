@@ -6,7 +6,7 @@ lints the tool metadata, and shows what breaks or silently loses information, wi
 for every claim. Offline: nothing is executed and no network is used for the checks.
 
 **Analyzed:** Composio commit [`6aa3f31`](https://github.com/ComposioHQ/composio/commit/6aa3f31ecf38fc5f9ea10d67e31a43ede2e2c693)
-· 930 tools × 6 adapters · 59 tests.
+· 930 tools × 6 adapters · 63 tests.
 
 ## See the results
 **Live:** https://tool-schema-doctor.netlify.app
