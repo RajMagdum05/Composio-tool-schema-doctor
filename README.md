@@ -9,6 +9,8 @@ for every claim. Offline: nothing is executed and no network is used for the che
 · 930 tools × 6 adapters · 59 tests.
 
 ## See the results
+**Live:** https://tool-schema-doctor.netlify.app
+
 The dashboard reads saved evidence, so it needs only Streamlit and pandas:
 
 ```bash

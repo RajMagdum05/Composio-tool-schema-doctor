@@ -22,3 +22,6 @@ tool-schema-doctor/out/evidence/run.log
 .env.*
 *.pem
 groq.env
+
+# Netlify CLI link state (site id)
+.netlify/

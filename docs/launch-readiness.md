@@ -25,7 +25,7 @@
 | 2 | Hosting requirements | **Done.** Root `requirements.txt` (`streamlit>=1.67,<2`, `pandas>=2`). Verified from a clean clone in a fresh environment that contains only those two packages: the dashboard renders with no errors, and a real `streamlit run` serves HTTP 200. |
 | 3 | **Rotate the Groq API key** that was pasted in chat | **Open: you.** It isn't in any file (verified), but it was exposed in the conversation. |
 | 4 | Choose a license for your own code | **Open: you.** None added. `NOTICE.md` covers the Composio (MIT) material only. |
-| 5 | Create a GitHub repo, push, and pick a host | **Open: you.** Publishing is public. For Streamlit Community Cloud: main file `tool-schema-doctor/streamlit_app.py`; it finds `requirements.txt` at the repo root. |
+| 5 | Host | **Done (static site): https://tool-schema-doctor.netlify.app**, deployed 2026-11-14 with the Netlify CLI from `site/` (built by `tool-schema-doctor/build_static.py`). Verified live: HTTP 200, all content and 7 evidence files, security headers, no personal data, JS lookup works in a browser. Redeploy after regenerating evidence: `python tool-schema-doctor/build_static.py`, then `netlify deploy --prod --dir site`. A GitHub repo is still not created or pushed. |
 
 **Verified before committing:** no tokens, usernames, hostnames or absolute machine paths in any tracked file. Two leftovers were redacted: a username in a path inside `investigation/results/synthetic_openai_gemini_adk.json`, and the machine hostname in the JUnit XML. `make_evidence.py` now strips the hostname automatically. `.claude/launch.json` (local paths) and the Composio checkout are git-ignored.
 

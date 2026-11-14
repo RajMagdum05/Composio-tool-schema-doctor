@@ -245,3 +245,14 @@ New `make_evidence.py` regenerates everything the page reads. It does not hand-e
 - A real `streamlit run` served HTTP 200 with no errors in its log.
 
 **Left for the user:** rotate the Groq key; choose a license; create a GitHub repo and push; choose a host. `docs/demo.md` still presents the Vertex finding as an open bug and must be updated before outreach.
+
+---
+
+## Dashboard restyle and public deploy: DONE
+
+**Date:** 2026-11-14
+
+- Restyled the dashboard after the look of composio.dev (palette, type and layout only; no logos), with an "Independent" strip and footer stating it is not affiliated with Composio. Shared `theme.css`.
+- Streamlit cannot run on Netlify or Vercel, so `build_static.py` renders the same page as static HTML plus a JavaScript lookup for all 930 tools. Tests check parity with the Streamlit page, evidence links, and that nothing personal or secret is published. 63/63 tests pass.
+- **Deployed to Netlify: https://tool-schema-doctor.netlify.app** (the user signed in through the CLI's browser approval). Verified live over HTTP and in a browser.
+- The Netlify CLI keeps its auth token in a plaintext file in the user profile. `netlify logout` removes it.
