@@ -17,6 +17,7 @@ Generate the evidence, then run (from the repository root):
 from __future__ import annotations
 
 import ast
+import html
 import importlib.util
 import json
 import os
@@ -40,49 +41,52 @@ st.set_page_config(page_title="Tool-Schema Doctor", layout="wide")
 # Styling is deliberately quiet: system fonts, hairline borders, no fills or gradients.
 # Colors come from the theme (.streamlit/config.toml) or are neutral transparencies of the
 # text color, so the page works in both light and dark mode.
+_theme = HERE / "theme.css"
+st.markdown("<style>" + (_theme.read_text(encoding="utf-8") if _theme.is_file() else "") + "</style>",
+            unsafe_allow_html=True)
 st.markdown("""
 <style>
-html, body, .stApp, button, input, textarea, select {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI",
-               "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-}
+/* Streamlit-only overrides: layout, widget chrome, and keeping Streamlit's own classes from winning. */
+header[data-testid="stHeader"], [data-testid="stToolbar"], [data-testid="stDecoration"] { display: none !important; }
+/* the elements that only carry a <style> block take no space (their styles still apply) */
+[data-testid="stElementContainer"]:has(> [data-testid="stMarkdown"] style) { display: none !important; }
+.stApp, [data-testid="stMain"], [data-testid="stAppViewContainer"] { overflow-x: hidden; background: #fff; }
+.block-container, [data-testid="stMainBlockContainer"] { max-width: 1040px !important; padding: 0 1.6rem 0 !important; }
+.bleed { width: 100vw; position: relative; left: 50%; margin-left: -50vw; }
+
 .stApp :is(p, li, h1, h2, h3, h4, h5, h6, label, summary, a, button, td, th, div, span):not(code *):not(pre *):not([data-testid="stIconMaterial"]) {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI",
-               "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-code, pre, kbd { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace !important; }
-p code, li code, td code, .stCaption code { color: inherit !important; background: rgba(128,128,128,.16) !important; border-radius: 5px; font-size: .86em; }
-.block-container { max-width: 980px; padding: 3.4rem 1.6rem 4rem; }
-header[data-testid="stHeader"] { background: transparent; }
-hr { border: none; border-top: 1px solid rgba(128,128,128,.22); margin: 2.4rem 0 1.2rem; }
+  font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+.stApp .mono, .stApp .mono *, .stApp .kicker, .stApp .lbl, .stApp .btn, .stApp .stat-label, .stApp .tag, .stApp .navr,
+.stApp .navr * { font-family: var(--mono) !important; }
+code, pre, kbd { font-family: var(--mono) !important; }
 
-.title { font-size: 3rem; font-weight: 700; letter-spacing: -.035em; line-height: 1.06; margin: 0 0 .9rem; }
-.lede  { font-size: 1.2rem; line-height: 1.5; opacity: .68; max-width: 620px; margin: 0 0 1rem; }
-.meta  { font-size: .84rem; opacity: .55; }
-.meta a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.stApp .hero h1 { font-size: clamp(2.3rem, 6vw, 4rem) !important; font-weight: 400 !important; letter-spacing: -.03em !important;
+  line-height: 1.1 !important; padding: 0 !important; margin: 0 auto 1.5rem !important; color: #fff !important; }
+.stApp .hero p { color: #a3a3a3 !important; font-size: 1.1rem !important; }
+.stApp .strip, .stApp .strip * { color: #fff !important; }
+.stApp .brand { color: #fff !important; }
+.stApp a.btn { color: var(--ink) !important; text-decoration: none !important; }
+.stApp a.btn.ghost { color: #fff !important; }
+.stApp .navr a { color: inherit !important; text-decoration: none !important; }
+.stApp .stat-num { color: #fff !important; }
+.stApp .stat-label, .stApp .stat-cap { color: var(--muted-dark) !important; }
+.stApp .scope { color: #707070 !important; }
+.stApp .footer, .stApp .footer * { color: var(--muted-dark); }
+.stApp .footer a { color: #cfcfcf !important; }
+.stApp .sec { color: var(--ink); } .stApp .sec .acc { color: var(--blue); }
 
-.sec { font-size: 1.7rem; font-weight: 650; letter-spacing: -.022em; margin: 3.2rem 0 .3rem; }
-.sub { font-size: .98rem; opacity: .6; margin: 0 0 1.3rem; max-width: 680px; }
-.h3  { font-size: 1.02rem; font-weight: 600; letter-spacing: -.01em; margin: 1.5rem 0 .45rem; }
-.lbl { font-size: .7rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; opacity: .5; margin: 1.05rem 0 .2rem; }
-.kicker { font-size: .82rem; opacity: .65; margin: 0 0 .15rem; }
-.dot { display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; margin-right: .45rem; vertical-align: .06rem; }
-.d-high { background: #ff453a; } .d-med { background: #ff9f0a; } .d-low { background: #8e8e93; } .d-fixed { background: #30d158; }
-.note { border-left: 2px solid rgba(128,128,128,.4); padding: .05rem 0 .05rem .95rem; margin: .3rem 0 1.1rem; opacity: .85; font-size: .95rem; }
-.foot { font-size: .78rem; opacity: .5; padding-top: .2rem; }
-
-[data-testid="stMetric"] { background: none; border: none; padding: 0; }
-[data-testid="stMetricValue"] { font-size: clamp(1.8rem, 3.7vw, 2.8rem); font-weight: 600; letter-spacing: -.035em; line-height: 1.05; }
-[data-testid="stMetricValue"] > div { overflow: visible !important; text-overflow: clip !important; white-space: nowrap; }
-[data-testid="stMetricLabel"] p { font-size: .88rem; opacity: .62; }
-[data-testid="stVerticalBlockBorderWrapper"]:has(> div > [data-testid="stVerticalBlock"] .kicker) {
-  border: 1px solid rgba(128,128,128,.22); border-radius: 18px; padding: .5rem .7rem .4rem; background: transparent; }
-[data-testid="stExpander"] { border: none !important; border-top: 1px solid rgba(128,128,128,.2) !important; border-radius: 0 !important; }
-[data-testid="stExpander"] summary { padding-left: 0; font-weight: 500; }
-button[kind="secondary"], .stDownloadButton button { border-radius: 980px; border-color: rgba(128,128,128,.35); font-size: .85rem; }
-[data-baseweb="tab-list"] { gap: 1.4rem; }
-h4 { font-size: 1.28rem !important; font-weight: 650 !important; letter-spacing: -.02em !important; padding: .1rem 0 .2rem !important; }
+h4 { font-size: 1.3rem !important; font-weight: 500 !important; letter-spacing: -.02em !important; padding: .1rem 0 .35rem !important; }
+[data-testid="stVerticalBlockBorderWrapper"]:has(.kicker) { border: 1px solid var(--line) !important; border-radius: 16px;
+  padding: .7rem 1rem .45rem; background: #fff; }
+[data-testid="stExpander"] { border: none !important; border-top: 1px solid var(--line) !important; border-radius: 0 !important; background: transparent; }
+[data-testid="stExpander"] summary { padding-left: 0; }
+[data-testid="stExpander"] summary p { font-family: var(--mono) !important; text-transform: uppercase; font-size: .72rem; letter-spacing: .05em; }
+.stButton button, .stDownloadButton button { border-radius: 2px; border: 1px solid var(--ink); background: transparent; color: var(--ink);
+  font-family: var(--mono) !important; text-transform: uppercase; font-size: .7rem; letter-spacing: .04em; padding: .55rem 1rem; }
+.stButton button:hover, .stDownloadButton button:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+[role="tablist"] { gap: 1.6rem; border-bottom: 1px solid var(--line); }
+[role="tab"] p { font-family: var(--mono) !important; text-transform: uppercase; font-size: .72rem !important; letter-spacing: .05em; }
+p code, li code, td code, .stCaption code { color: inherit !important; background: rgba(0,0,0,.06) !important; border-radius: 4px; font-size: .86em; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -186,8 +190,9 @@ def heading(text: str):
     st.markdown(f"<div class='h3'>{text}</div>", unsafe_allow_html=True)
 
 
-def section(title: str, sub: str = ""):
-    st.markdown(f"<div class='sec'>{title}</div>" + (f"<div class='sub'>{sub}</div>" if sub else ""),
+def section(title: str, sub: str = "", anchor: str = ""):
+    ident = f" id='{anchor}'" if anchor else ""
+    st.markdown(f"<div class='sec'{ident}>{title}</div>" + (f"<div class='sub'>{sub}</div>" if sub else ""),
                 unsafe_allow_html=True)
 
 
@@ -248,46 +253,47 @@ def dup_groups(findings):
 
 groups = dup_groups(cat_findings)
 
-# ================================================================== HEADER
+# ================================================================== HERO
 tests_ok = bool(T.get("tests")) and T.get("passed") == T.get("tests")
-tests_txt = (f"all {T.get('tests')} tests passing" if tests_ok
+tests_txt = (f"All {T.get('tests')} tests passing" if tests_ok
              else f"{T.get('passed', '?')} of {T.get('tests', '?')} tests passing")
+vertex_note = f", fixed upstream in #{VFIX['pr']}" if VERTEX_FIXED else ""
+STATS = [
+    ("Tools that fail to convert", str(len(adapter_errors)),
+     f"Vertex {len(vertex_err)}{vertex_note} · Gemini {len(gemini_err)} · OpenAI, Anthropic, ADK 0",
+     "The adapter raised an error: the tool cannot be sent to that provider."),
+    ("No OpenAI strict mode", str(strict_n),
+     f"of {n_tools} tools. They still work, just without the guarantee.",
+     "Sent without strict mode instead (the SDK logs a warning)."),
+    ("Gemini drops enums", f"{enum_dropped} / {enum_total}", "of the tools that define an enum",
+     "Tools whose enum is dropped from the Gemini declaration."),
+    ("Missing action hints", f"{len(missing_hint)} / {n_tools}",
+     f"{len(missing_hint) / max(n_tools, 1):.1%} of the test fixture",
+     "None of readOnly, create, update or destructive: approval rules cannot see intent."),
+]
+stat_html = "".join(
+    f"<div class='stat' title='{html.escape(tip, quote=True)}'><div class='stat-label'>{lab}</div>"
+    f"<div class='stat-num'>{val}</div><div class='stat-cap'>{cap}</div></div>"
+    for lab, val, cap, tip in STATS)
 st.markdown(f"""
-<div class="title">Find what breaks<br>before an agent does.</div>
-<div class="lede">Every Composio tool, run through the real provider adapters, and the tool metadata,
-checked. Each finding opens to the evidence behind it.</div>
-<div class="meta">Composio <a href="{REPO}/commit/{SHA}" target="_blank">{SHA[:7]}</a> &nbsp;·&nbsp;
-{n_tools} tools &nbsp;·&nbsp; 6 adapters &nbsp;·&nbsp; offline, nothing executed &nbsp;·&nbsp;
-{tests_txt} &nbsp;·&nbsp; evidence from {EVD['generated_at'][:10]}</div>
+<div class="bleed">
+<div class="strip"><div class="inner"><span class="tag">Independent</span><span>An analysis of Composio's tool schemas. Not affiliated with or endorsed by Composio.</span></div></div>
+<div class="dark"><div class="inner">
+<div class="nav"><div class="brand">Tool-Schema Doctor</div>
+<div class="navr"><a href="{REPO}/commit/{SHA}" target="_blank">Composio @ {SHA[:7]}</a><span>{n_tools} tools · 6 adapters</span><span>{tests_txt}</span><span>Evidence {EVD['generated_at'][:10]}</span></div></div>
+<div class="hero"><h1>Find what breaks <span class="hl">before an agent does</span></h1>
+<p>Every Composio tool, run through the real provider adapters, and the tool metadata, checked. Each finding opens to the evidence behind it.</p>
+<div class="btns"><a class="btn" href="#fixes">See what to fix</a><a class="btn ghost" href="#deeper">Check a tool</a></div></div>
+<div class="stats">{stat_html}</div>
+<div class="scope">Schema checks use the 930-tool fixture shipped in Composio's CLI tests, which is GitHub-heavy. Name and description checks use the 84,004-tool docs catalog. These numbers describe those snapshots, not the live catalog.</div>
+</div></div>
+</div>
 """, unsafe_allow_html=True)
 
-# ================================================================== VERDICT
-st.markdown("<div style='height:2.4rem'></div>", unsafe_allow_html=True)
-c1, c2, c3, c4 = st.columns(4, gap="large")
-c1.metric("Tools that fail to convert", len(adapter_errors),
-          help="The adapter raised an error: the tool cannot be sent to that provider.")
-c1.caption(f"Vertex {len(vertex_err)}" + (f", fixed upstream in #{VFIX['pr']}" if VERTEX_FIXED else "")
-           + f" · Gemini {len(gemini_err)} · OpenAI, Anthropic, ADK 0")
-c2.metric("No OpenAI strict mode", strict_n,
-          help="Sent without strict mode instead (the SDK logs a warning).")
-c2.caption(f"of {n_tools} tools. They still work, just without the guarantee.")
-c3.metric("Gemini drops enums", f"{enum_dropped} / {enum_total}",
-          help="Tools whose `enum` is dropped from the Gemini declaration.")
-c3.caption("of the tools that define an enum")
-c4.metric("Missing action hints", f"{len(missing_hint)} / {n_tools}",
-          help="None of readOnly, create, update or destructive: approval rules can't see intent.")
-c4.caption(f"{len(missing_hint) / max(n_tools, 1):.1%} of the test fixture")
-
-st.markdown(
-    "<div class='meta' style='margin-top:1.6rem;max-width:720px'>Schema checks use the 930-tool fixture "
-    "shipped in Composio's CLI tests, which is GitHub-heavy. Name and description checks use the 84,004-tool "
-    "docs catalog. These numbers describe those snapshots, not the live catalog.</div>",
-    unsafe_allow_html=True)
-
 # ================================================================== FIX LIST
-section("What to fix, in priority order",
+section('What to fix, <span class="acc">in priority order</span>',
         "Open Evidence on any item for the affected tools, the raw errors, the upstream code, "
-        "the command that reproduces it, and the tests that pin it.")
+        "the command that reproduces it, and the tests that pin it.", "fixes")
 
 _card_no = iter(range(1, 100))
 _SEV = {"high": ("d-high", "High"), "medium": ("d-med", "Medium"),
@@ -470,7 +476,7 @@ if VERTEX_FIXED:
     show_vertex_card()
 
 # ================================================================== DETAILS
-section("Go deeper")
+section('Go <span class="acc">deeper</span>', "", "deeper")
 tab_tool, tab_all, tab_trust = st.tabs(["Check a tool", "All results", "How we know"])
 
 with tab_tool:
@@ -575,9 +581,8 @@ with tab_trust:
     st.markdown("**Limits.** The 930-tool fixture is a test mock and is GitHub-heavy; results reflect the adapter versions "
                 "above; the selection eval is a small, curated, model-dependent check.")
 
-st.markdown("<hr>", unsafe_allow_html=True)
-st.markdown(
-    f"<div class='foot'>Every number on this page is read from saved CLI output in tool-schema-doctor/out/. "
-    f"Tool fixtures and adapter code are from <a href='{REPO}/tree/{SHA}' target='_blank'>ComposioHQ/composio</a> (MIT). "
-    f"This is an independent project.</div>",
-    unsafe_allow_html=True)
+st.markdown(f"""
+<div class="bleed" style="margin-top:4.5rem"><div class="footer"><div class="inner">
+Every number on this page is read from saved CLI output in tool-schema-doctor/out/. Tool fixtures and adapter code are from <a href="{REPO}/tree/{SHA}" target="_blank">ComposioHQ/composio</a> (MIT). This is an independent project and is not affiliated with or endorsed by Composio.
+</div></div></div>
+""", unsafe_allow_html=True)

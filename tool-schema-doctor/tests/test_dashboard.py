@@ -28,9 +28,14 @@ def _run():
 def test_dashboard_renders_without_exceptions():
     at = _run()
     assert not at.exception, [e.message for e in at.exception]
-    labels = [m.label for m in at.metric]
-    assert labels[:4] == ["Tools that fail to convert", "No OpenAI strict mode",
-                          "Gemini drops enums", "Missing action hints"]
+    page = "\n".join(m.value for m in at.markdown)
+    assert re.findall(r"<div class='stat-label'>([^<]*)</div>", page) == [
+        "Tools that fail to convert", "No OpenAI strict mode", "Gemini drops enums", "Missing action hints"]
+    # the four numbers come from the saved evidence, not from constants in the page
+    nums = re.findall(r"<div class='stat-num'>([^<]*)</div>", page)
+    assert nums[0] == "7" and nums[1] == "114" and nums[2] == "179 / 182" and nums[3] == "227 / 930"
+    # independence is stated at the very top of the page
+    assert "Not affiliated with or endorsed by Composio" in page
 
 
 def test_fix_list_has_five_findings_and_all_pinned_tests_pass():
