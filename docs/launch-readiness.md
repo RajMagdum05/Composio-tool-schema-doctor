@@ -18,13 +18,16 @@
 - **Data and licensing.** The data the app reads is 5.1 MB, with no secrets in any project file. The upstream fixtures are MIT-licensed and attributed in the footer.
 - **Tests:** 59/59 passing.
 
-## 2. Deploy: blockers
-| # | Blocker | Why it matters | Who |
-|---|---|---|---|
-| 1 | **No git repo.** None of this work is under version control. | Hosts deploy from a repo, and outreach needs a link. | Me: `git init` + `.gitignore` + commit locally. You: push to GitHub. |
-| 2 | **No requirements file for the host** (e.g. Streamlit Community Cloud). | The viewer only needs `streamlit` and `pandas`; the heavy provider SDKs are needed only for the local live re-run. | Me |
-| 3 | **Rotate the Groq API key** that was pasted in chat. | It isn't in any file, but it was exposed in the conversation. | You |
-| 4 | Choose a host and publish. | Publishing is public and outward-facing. | You decide; I can prepare everything |
+## 2. Deploy: status
+| # | Item | Status |
+|---|---|---|
+| 1 | Git repo | **Done (local).** Commit `abfb367` on `main`, 71 files, clean tree. Nothing is pushed. |
+| 2 | Hosting requirements | **Done.** Root `requirements.txt` (`streamlit>=1.67,<2`, `pandas>=2`). Verified from a clean clone in a fresh environment that contains only those two packages: the dashboard renders with no errors, and a real `streamlit run` serves HTTP 200. |
+| 3 | **Rotate the Groq API key** that was pasted in chat | **Open: you.** It isn't in any file (verified), but it was exposed in the conversation. |
+| 4 | Choose a license for your own code | **Open: you.** None added. `NOTICE.md` covers the Composio (MIT) material only. |
+| 5 | Create a GitHub repo, push, and pick a host | **Open: you.** Publishing is public. For Streamlit Community Cloud: main file `tool-schema-doctor/streamlit_app.py`; it finds `requirements.txt` at the repo root. |
+
+**Verified before committing:** no tokens, usernames, hostnames or absolute machine paths in any tracked file. Two leftovers were redacted: a username in a path inside `investigation/results/synthetic_openai_gemini_adk.json`, and the machine hostname in the JUnit XML. `make_evidence.py` now strips the hostname automatically. `.claude/launch.json` (local paths) and the Composio checkout are git-ignored.
 
 **What goes in the repo:** `tool-schema-doctor/` (source, tests, `out/`) and `docs/`.
 
@@ -55,8 +58,8 @@
    - The selection eval is exploratory: 27 curated tasks.
 
 **Before sending anything:**
-- [ ] Rotate the Groq key.
-- [ ] Put the work in a public repo (see §2).
+- [ ] Rotate the Groq key (you).
+- [ ] Create the GitHub repo and push the local commit (you; see §2).
 - [ ] Update `docs/demo.md`: its script and outreach blurb still present Vertex as an open bug.
 - [ ] Optional: verify the Vertex fix with our tool (needs your OK), so the pitch can say "verified: 6 → 0".
 - [ ] Record a 2–3 minute demo of the dashboard.

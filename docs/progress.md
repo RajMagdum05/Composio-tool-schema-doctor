@@ -226,3 +226,22 @@ New `make_evidence.py` regenerates everything the page reads. It does not hand-e
 **Tests:** 59/59 passed. New tests cover the dashboard without the checkout and the fixed-upstream ordering.
 
 **Readiness:** see `docs/launch-readiness.md`. Deploy is blocked by: no git repo, no hosting requirements file, and the Groq key needing rotation. Outreach is ready only with the reframe described there.
+
+---
+
+## Repo and deploy setup — DONE (local only; nothing pushed)
+
+**Date:** 2026-11-14
+
+**Done:**
+- `git init` on `main`, with `.gitignore`, `.gitattributes`, a root `README.md`, `NOTICE.md` (Composio MIT attribution, pinned commit and fixture hashes) and a root `requirements.txt` that the host will find. First commit: `abfb367`, 71 files.
+- **Audit before committing:** removed one username-bearing path from `investigation/results/synthetic_openai_gemini_adk.json` and the hostname from the JUnit XML (`make_evidence.py` now clears the hostname itself). No tokens or machine paths remain in tracked files. `composio-upstream/`, the venv and `.claude/` are ignored.
+- `pyproject.toml` `dashboard` extra now requires `streamlit>=1.67,<2` (the tested version).
+
+**Verified on a clean clone of the commit, in a fresh environment with only `requirements.txt` installed (streamlit 1.67.0, pandas 3.1.1):**
+- The dashboard renders with no exceptions: 4 headline numbers, 5 fix cards, all pinned tests green.
+- Single-tool lookup shows the full 11-path error.
+- The live-run button is correctly hidden without the checkout.
+- A real `streamlit run` served HTTP 200 with no errors in its log.
+
+**Left for the user:** rotate the Groq key; choose a license; create a GitHub repo and push; choose a host. `docs/demo.md` still presents the Vertex finding as an open bug and must be updated before outreach.
