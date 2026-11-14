@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tool-schema-doctor"
+version = "0.1.0"
+description = "Offline QA CLI for Composio tool schemas: provider-compatibility checking and metadata linting."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "composio",
+]
+
+[project.optional-dependencies]
+openai = ["composio-openai", "openai>=2.48.0,<4"]
+anthropic = ["composio-anthropic", "anthropic>=0.120.0,<3"]
+google = ["composio-google", "google-cloud-aiplatform>=1.162.0,<3"]
+gemini = ["composio-gemini", "google-genai>=2.14.0,<3"]
+adk = ["composio-google-adk", "google-adk>=2.5.0,<3"]
+all = [
+    "composio-openai", "openai>=2.48.0,<4",
+    "composio-anthropic", "anthropic>=0.120.0,<3",
+    "composio-google", "google-cloud-aiplatform>=1.162.0,<3",
+    "composio-gemini", "google-genai>=2.14.0,<3",
+    "composio-google-adk", "google-adk>=2.5.0,<3",
+]
+dev = ["pytest>=7"]
+dashboard = ["streamlit>=1.67,<2", "pandas>=2"]
+
+[project.scripts]
+tool-schema-doctor = "tool_schema_doctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tool_schema_doctor = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

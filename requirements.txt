@@ -1,0 +1,8 @@
+# Hosting requirements for the read-only dashboard (e.g. Streamlit Community Cloud).
+# Main file: tool-schema-doctor/streamlit_app.py
+#
+# The dashboard only reads saved evidence under tool-schema-doctor/out/, so it needs
+# nothing else. The provider SDKs are needed only to regenerate the evidence or to use
+# the CLI, and are optional extras of the tool-schema-doctor package.
+streamlit>=1.67,<2     # developed and tested with 1.67.0
+pandas>=2

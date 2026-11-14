@@ -1,0 +1,49 @@
+{
+ "google_vertex(composio_google)": {
+  "tools": 930,
+  "failures": 6,
+  "failure_types": [
+   [
+    "ParseError",
+    6
+   ]
+  ],
+  "failure_samples": [
+   {
+    "slug": "GOOGLEDRIVE_FILES_MODIFY_LABELS",
+    "error_type": "ParseError",
+    "error": "Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[label_modifications].items.propert"
+   },
+   {
+    "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
+    "error_type": "ParseError",
+    "error": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[permission].properties[role]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', '"
+   },
+   {
+    "slug": "GOOGLEDRIVE_UPLOAD_FILE",
+    "error_type": "ParseError",
+    "error": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"fileUploadable\" at \"Schema.properties[file_to_upload]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems'"
+   },
+   {
+    "slug": "GOOGLE_ANALYTICS_CREATE_EXPANDED_DATA_SET",
+    "error_type": "ParseError",
+    "error": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[expandedDataSet].properties[dimensionNames]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description'"
+   },
+   {
+    "slug": "GOOGLE_CLASSROOM_COURSE_WORK_PATCH",
+    "error_type": "ParseError",
+    "error": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[dueDate].properties[day]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'defa"
+   },
+   {
+    "slug": "GOOGLE_MAPS_MAPS_EMBED_API",
+    "error_type": "ParseError",
+    "error": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[directions_params].properties[avoid]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'null"
+   }
+  ],
+  "tools_losing_keyword": {
+   "examples": 890,
+   "additionalProperties": 26,
+   "title": 18
+  }
+ }
+}

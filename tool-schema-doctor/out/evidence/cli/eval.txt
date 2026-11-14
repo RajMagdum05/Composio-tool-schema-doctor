@@ -1,0 +1,8 @@
+{
+  "mode": "offline-validation",
+  "dataset": "composio-tool-selection-ambiguity-v1",
+  "tasks": 27,
+  "integrity_problems": [],
+  "ok": true,
+  "note": "pass --live (needs GROQ_API_KEY) to run the LLM selection."
+}

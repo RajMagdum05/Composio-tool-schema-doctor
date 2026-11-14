@@ -1,0 +1,2020 @@
+{
+  "input": "composio-upstream/docs/public/data/toolkits.json",
+  "source": "catalog",
+  "tools": 84004,
+  "summary": {
+    "total": 1287,
+    "by_rule": {
+      "description-repeats-name": 678,
+      "duplicate-display-name-in-toolkit": 609
+    },
+    "by_severity": {
+      "warning": 678,
+      "info": 609
+    }
+  },
+  "skipped_rules": {},
+  "findings": [
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "AMBIGUOUS_MCP_LIST_SHARED_DRIVE_MEMBERS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "ambiguous_mcp",
+      "field_path": null,
+      "evidence": "description='List shared drive members.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_ADD_CUSTOM_FIELD_SETTING_FOR_PROJECT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Add a custom field to a project.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_BUDGET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a budget.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_OOO_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create an OOO entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_RATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a rate.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_ROLE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a role.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_TIMESHEET_APPROVAL_STATUS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a timesheet approval status.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_TIME_TRACKING_CATEGORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a time tracking category.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_CREATE_TIME_TRACKING_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a time tracking entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_BUDGET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a budget.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_OOO_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete an OOO entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_PROJECT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a project.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_PROJECT_TEMPLATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a project template.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_RATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a rate.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_ROLE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a role.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_TASK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a task.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_TASK_TEMPLATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a task template.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_TIME_TRACKING_CATEGORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a time tracking category.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_TIME_TRACKING_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a time tracking entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_DELETE_WEBHOOK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Delete a webhook.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_BUDGET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a budget.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_BUDGETS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get all budgets.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_CUSTOM_FIELD_SETTINGS_FOR_TEAM",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description=\"Get a team's custom fields.\"",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_CUSTOM_TYPE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a custom type.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_OOO_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get an OOO entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_PROJECT_PORTFOLIO_SETTING",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a project portfolio setting.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_RATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a rate.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_ROLE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a role.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_TASK_FOR_CUSTOM_ID",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a task for a given custom ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_TIMESHEET_APPROVAL_STATUS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a timesheet approval status.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_TIME_TRACKING_CATEGORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a time tracking category.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_TIME_TRACKING_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a time tracking entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_GET_WEBHOOK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Get a webhook.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_INSTANTIATE_TASK_TEMPLATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Instantiate a task from a task template.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_REMOVE_CUSTOM_FIELD_SETTING_FOR_PROJECT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Remove a custom field from a project.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_SAVE_PROJECT_AS_TEMPLATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Create a project template from a project.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_SEARCH_PROJECTS_FOR_WORKSPACE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Search projects in a workspace.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_BUDGET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a budget.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_MEMBERSHIP",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a membership.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_OOO_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update an OOO entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_PROJECT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a project.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_PROJECT_PORTFOLIO_SETTING",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a project portfolio setting.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_RATE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a rate.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_ROLE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a role.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_TIMESHEET_APPROVAL_STATUS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a timesheet approval status.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_TIME_TRACKING_CATEGORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a time tracking category.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_TIME_TRACKING_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a time tracking entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "ASANA_UPDATE_WORKSPACE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "asana",
+      "field_path": null,
+      "evidence": "description='Update a workspace.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_ADDITIONAL_ADDRESS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create additional address.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_BUSINESS_ACTIVITY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create business activity.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_CALENDAR_YEAR",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create calendar year.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_CONTACT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create contact.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_CONTACT_GROUP",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create contact group.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_CONTACT_RELATION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create contact relation.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_COUNTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create country.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_DELIVERY_FROM_ORDER",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create delivery from order.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_EMPLOYEE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_INVOICE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create invoice.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_INVOICE_FROM_ORDER",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create invoice from order.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_INVOICE_FROM_QUOTE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create invoice from quote.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_ITEM",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create item.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_MANUAL_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create manual entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_MILESTONE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create milestone.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_NOTE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create note.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_ORDER",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create order.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_ORDER_FROM_QUOTE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create order from quote.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_PROJECT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create project.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_QUOTE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create quote.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_SALUTATION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create salutation.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_TASK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create task.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_TITLE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create title.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_UNIT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create unit.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_CREATE_WORK_PACKAGE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Create work package.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_DOWNLOAD_FILE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Download file.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_LIST_DOCUMENT_SETTINGS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='List document settings.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_UPDATE_BILL",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Update Bill.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_UPDATE_EMPLOYEE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Update employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_UPDATE_EXPENSE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Update Expense.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BEXIO_UPDATE_MANUAL_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bexio",
+      "field_path": null,
+      "evidence": "description='Update manual entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "CALENDARHERO_FETCH_CONTACT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "calendarhero",
+      "field_path": null,
+      "evidence": "description='Fetch Contact'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "CLOUDINARY_GET_RESOURCE_BY_ASSET_ID",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "cloudinary",
+      "field_path": null,
+      "evidence": "description='Get Resource by Asset ID'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "CODA_PATCH_THE_SYSTEM_CONNECTION_CREDENTIALS_OF_THE_PACK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "coda",
+      "field_path": null,
+      "evidence": "description='Patch the system connection credentials of the Pack.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "DEPUTY_GET_ME",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "deputy",
+      "field_path": null,
+      "evidence": "description='Get OAuth Identity.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "DROPBOX_MOVE_FILE_OR_FOLDER",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "dropbox",
+      "field_path": null,
+      "evidence": "description='Move file or folder'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "DYNAMICS365_DYNAMICSCRM_GET_A_LEAD",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "dynamics365",
+      "field_path": null,
+      "evidence": "description='Dynamicscrm get a lead'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_CALCULATE_WORKBOOK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Calculate Excel Workbook'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_CLEAR_TABLE_FILTERS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Clear All Table Filters'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_CLEAR_TABLE_SORT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Clear Table Sort'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_APPLICATION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Excel Application'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_CHART",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get chart'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_CHART_POINT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get chart point'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_CHART_SERIES",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get chart series'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_PIVOT_TABLE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Pivot Table'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_TABLE_COLUMN_RANGE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Table Column Range'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_TABLE_RANGE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Table Range'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_TABLE_ROW",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Table Row'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_TABLE_ROW_RANGE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Table Row Range'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_TABLE_SORT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Table Sort'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_GET_WORKSHEET_PROTECTION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Get Worksheet Protection'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_LIST_CHART_POINTS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='List chart points'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_LIST_PIVOT_TABLES",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='List Pivot Tables'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_REAPPLY_TABLE_FILTERS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Reapply All Table Filters'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_REAPPLY_TABLE_SORT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Reapply Table Sort'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_REFRESH_PIVOT_TABLES",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Refresh Pivot Tables'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_REFRESH_SESSION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Refresh Excel Session'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_SET_CHART_POSITION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Set chart position'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "EXCEL_UPDATE_TABLE_ROW",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "excel",
+      "field_path": null,
+      "evidence": "description='Update Table Row'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "FORCEMANAGER_UPDATE_COMPANY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "forcemanager",
+      "field_path": null,
+      "evidence": "description='Update Company'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "FORCEMANAGER_UPDATE_SALES_ORDER",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "forcemanager",
+      "field_path": null,
+      "evidence": "description='Update Sales Order'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "FRONT_LIST_CATEGORIES_IN_A_KNOWLEDGE_BASE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "front",
+      "field_path": null,
+      "evidence": "description='List categories in a knowledge base.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GETRESPONSE_CREATE_TAG",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "getresponse",
+      "field_path": null,
+      "evidence": "description='Add a new tag.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GETRESPONSE_GET_ACCOUNT_BLOCKLIST",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "getresponse",
+      "field_path": null,
+      "evidence": "description='Returns account blocklist masks.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GETRESPONSE_GET_CONTACT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "getresponse",
+      "field_path": null,
+      "evidence": "description='Get contact details by contact ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GETRESPONSE_GET_SUPPRESSION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "getresponse",
+      "field_path": null,
+      "evidence": "description='Get a suppression list by ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GETRESPONSE_GET_WEBINAR",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "getresponse",
+      "field_path": null,
+      "evidence": "description='Get a webinar by ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GITHUB_GET_AN_ORGANIZATION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "github",
+      "field_path": null,
+      "evidence": "description='Get an organization'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GITHUB_LIST_ORGANIZATION_MEMBERSHIPS_FOR_THE_AUTHENTICATED_U",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "github",
+      "field_path": null,
+      "evidence": "description='List organization memberships for authenticated user'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GITLAB_GET_GROUPS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "gitlab",
+      "field_path": null,
+      "evidence": "description='Get Groups'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GOOGLESUPER_LIST_CALCULATED_METRICS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "googlesuper",
+      "field_path": null,
+      "evidence": "description='List Calculated Metrics'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GOOGLESUPER_LIST_CUSTOM_DIMENSIONS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "googlesuper",
+      "field_path": null,
+      "evidence": "description='List Custom Dimensions'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GOOGLE_ANALYTICS_LIST_CALCULATED_METRICS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "google_analytics",
+      "field_path": null,
+      "evidence": "description='List Calculated Metrics'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "GOOGLE_ANALYTICS_LIST_CUSTOM_DIMENSIONS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "google_analytics",
+      "field_path": null,
+      "evidence": "description='List Custom Dimensions'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_CREATE_EMPLOYEE_BANK_ACCOUNT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Create a new bank account entry for a given employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_CREATE_EMPLOYEE_EMPLOYMENT_HISTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Creates a new employment entry for a given employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_CREATE_EMPLOYEE_EQUITY_GRANT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Creates a new equity grant for a given employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_CREATE_EMPLOYEE_SALARY_HISTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Creates a new salary entry for a given employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_CREATE_EMPLOYEE_WORK_HISTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Create a new work entry for a given employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_CREATE_NAMED_LIST_ITEM",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Add a new item to an existing list.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_CUSTOM_TABLE_ENTRY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Delete custom table entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_EMPLOYEE_BANK_ACCOUNT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description=\"Deletes a bank account entry from a given employee's bank accounts table.\"",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_EMPLOYEE_EMPLOYMENT_HISTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description=\"Deletes an employment entry from a given employee's employment history.\"",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_EMPLOYEE_EQUITY_GRANT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Deletes an equity grant for an employee.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_EMPLOYEE_SALARY_HISTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description=\"Deletes a salary entry from the employee's list.\"",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_EMPLOYEE_WORK_HISTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description=\"Deletes a work entry from a given employee's work history.\"",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_DELETE_NAMED_LIST_ITEM",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Delete an item from an existing list.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_GET_CUSTOM_TABLE_METADATA",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Read metadata for specific custom table.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_GET_NAMED_LIST",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Get a specific company list by name.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_LIST_COMPANY_LISTS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Get all company lists.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_LIST_CUSTOM_TABLES_METADATA",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Read metadata of custom tables defined.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HIBOB_UPDATE_NAMED_LIST_ITEM",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "hibob",
+      "field_path": null,
+      "evidence": "description='Update an existing item from a list.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "HOUSECALL_PRO_CREATE_CUSTOMER_ADDRESS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "housecall_pro",
+      "field_path": null,
+      "evidence": "description='Create an address on a customer.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_CREATE_MANY_SECRETS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Create many secrets.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_CA_CSR",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get CA CSR.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_CERTIFICATE_PRIVATE_KEY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get certificate private key.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_CERTIFICATE_REQUEST",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get certificate request.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_ENVIRONMENT_BY_ID",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get Environment by ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_ENVIRONMENT_BY_SLUG",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get Environment by slug.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_IDENTITY_AUTH_TEMPLATES_BY_AUTHENTICATION_METHOD",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get identity auth templates by authentication method.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_KMS_KEY_BY_ID",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get KMS key by ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_KMS_KEY_BY_NAME",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get KMS key by name.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_GET_TEMPLATE_USAGE_BY_TEMPLATE_ID",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='Get template usage by template ID.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_LIST_CERTIFICATE_AUTHORITIES",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='List certificate authorities.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_LIST_HSM_CONNECTORS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='List HSM connectors.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_LIST_MACHINE_IDENTITIES",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='List machine identities.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_LIST_PROJECT_GROUP_MEMBERSHIPS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='List project group memberships.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_LIST_PROJECT_IDENTITY_MEMBERSHIPS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='List project identity memberships.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "INFISICAL_LIST_VENAFI_TPP_CERTIFICATE_AUTHORITIES",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "infisical",
+      "field_path": null,
+      "evidence": "description='List Venafi TPP certificate authorities.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ADD_A_CONFIGURATION_PROFILE_INTERFACE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Add a configuration profile interface.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ADD_A_LINODE_INTERFACE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Add a Linode interface.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ADD_A_NAT_GATEWAY_IP_ADDRESS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Add a NAT Gateway IP address.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ALLOCATE_AN_IPV4_ADDRESS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Allocate an IPv4 address.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ALLOW_CORS_ACCESS_TO_AN_OBJECT_STORAGE_BUCKET_E0_E1",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Allow CORS access to an Object Storage bucket (E0/E1).'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_APPLY_A_LINODE_S_FIREWALLS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description=\"Apply a Linode's firewalls.\"",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ASSIGN_A_PLACEMENT_GROUP",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Assign a placement group.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ATTACH_A_VOLUME",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Attach a volume.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_BOOT_A_LINODE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Boot a Linode.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_BOOT_A_LINODE_INTO_RESCUE_MODE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Boot a Linode into rescue mode.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CLONE_AN_ALERT_DEFINITION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Clone an alert definition.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CLONE_A_DISK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Clone a disk.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CLONE_A_DOMAIN",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Clone a domain.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CLONE_A_LINODE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Clone a Linode.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CLONE_A_VOLUME",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Clone a volume.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CLOSE_A_SUPPORT_TICKET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Close a support ticket.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CONFIGURE_IPV4_SHARING",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Configure IPv4 sharing.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_AN_ALERT_DEFINITION",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create an alert definition.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_AN_IMAGE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create an image.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_AN_IPV6_RANGE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create an IPv6 range.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_CONFIGURATION_PROFILE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a configuration profile.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_DOMAIN",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a domain.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_DOMAIN_RECORD",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a domain record.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_FIREWALL",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a firewall.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_FIREWALL_DEVICE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a firewall device.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_MANAGED_CONTACT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a managed contact.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_MANAGED_SERVICE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a managed service.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_NAT_GATEWAY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a NAT Gateway.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_NODE",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a node.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_NODE_POOL",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a node pool.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_PLACEMENT_GROUP",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a placement group.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_POSTGRESQL_CONNECTION_POOL",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a PostgreSQL connection pool.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_REPLY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a reply.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_RESOURCE_LOCK",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a resource lock.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_RULE_SET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a Rule Set.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_SNAPSHOT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a snapshot.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_STACKSCRIPT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a StackScript.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_STREAM",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a stream.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_SUPPORT_TICKET_ATTACHMENT",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a support ticket attachment.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_TAG",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a tag.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_VPC",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a VPC.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_CREATE_A_VPC_SUBNET",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Create a VPC subnet.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "LINODE_ENABLE_A_MANAGED_SERVICE_MONITOR",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "linode",
+      "field_path": null,
+      "evidence": "description='Enable a managed service monitor.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    }
+  ],
+  "truncated": true
+}

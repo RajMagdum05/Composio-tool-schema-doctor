@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "generated_at": "2026-11-13T18:28:15+00:00",
+    "model": "allam-2-7b",
+    "prompt_version": "v1",
+    "dataset": "composio-tool-selection-ambiguity-v1",
+    "selection_only": true,
+    "disclosure": "Results depend on the model and prompt; a different model or prompt will score differently."
+  },
+  "metrics": {
+    "total": 27,
+    "correct": 26,
+    "accuracy": 0.963,
+    "incorrect_selection_rate": 0.037,
+    "invalid_slug_count": 0,
+    "error_count": 0,
+    "by_category": {
+      "create-variant": {
+        "correct": 3,
+        "total": 3,
+        "accuracy": 1.0
+      },
+      "cross-toolkit": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1.0
+      },
+      "deprecated-alias": {
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1.0
+      },
+      "functional-overlap": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1.0
+      },
+      "read-vs-write": {
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1.0
+      },
+      "scope": {
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      },
+      "trap-keyword": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "correct": 12,
+        "total": 12,
+        "accuracy": 1.0
+      },
+      "hard": {
+        "correct": 2,
+        "total": 3,
+        "accuracy": 0.667
+      },
+      "medium": {
+        "correct": 12,
+        "total": 12,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "t01",
+      "expected": "GITHUB_CREATE_AN_ISSUE",
+      "chosen": "GITHUB_CREATE_AN_ISSUE",
+      "correct": true,
+      "valid": true,
+      "category": "deprecated-alias",
+      "difficulty": "easy",
+      "reasoning": "GITHUB_CREATE_AN_ISSUE is the recommended tool as it is more specific and up-to-date, ensuring the issue is created correctly in the user's GitHub repository.",
+      "error": null
+    },
+    {
+      "id": "t02",
+      "expected": "GITHUB_CREATE_A_FORK",
+      "chosen": "GITHUB_CREATE_A_FORK",
+      "correct": true,
+      "valid": true,
+      "category": "deprecated-alias",
+      "difficulty": "easy",
+      "reasoning": "GITHUB_CREATE_A_FORK is the recommended tool for creating a fork of an accessible repository.",
+      "error": null
+    },
+    {
+      "id": "t03",
+      "expected": "GITHUB_CREATE_A_GIST",
+      "chosen": "GITHUB_CREATE_A_GIST",
+      "correct": true,
+      "valid": true,
+      "category": "deprecated-alias",
+      "difficulty": "easy",
+      "reasoning": "The recommended tool for creating a secret gist is 'GITHUB_CREATE_A_GIST', as it allows for specifying the visibility as secret.",
+      "error": null
+    },
+    {
+      "id": "t04",
+      "expected": "GITHUB_CREATE_A_PULL_REQUEST",
+      "chosen": "GITHUB_CREATE_A_PULL_REQUEST",
+      "correct": true,
+      "valid": true,
+      "category": "deprecated-alias",
+      "difficulty": "easy",
+      "reasoning": "GITHUB_CREATE_A_PULL_REQUEST is the recommended tool as it is the current and specific method for creating a pull request in a github repository.",
+      "error": null
+    },
+    {
+      "id": "t05",
+      "expected": "GITHUB_STAR_A_REPOSITORY_FOR_THE_AUTHENTICATED_USER",
+      "chosen": "GITHUB_STAR_A_REPOSITORY_FOR_THE_AUTHENTICATED_USER",
+      "correct": true,
+      "valid": true,
+      "category": "deprecated-alias",
+      "difficulty": "medium",
+      "reasoning": "The recommended and up-to-date tool to star a repository on GitHub for the authenticated user.",
+      "error": null
+    },
+    {
+      "id": "t06",
+      "expected": "GITHUB_CREATE_AN_ISSUE_COMMENT",
+      "chosen": "GITHUB_CREATE_AN_ISSUE_COMMENT",
+      "correct": true,
+      "valid": true,
+      "category": "create-variant",
+      "difficulty": "easy",
+      "reasoning": "To add a comment to GitHub issue #42 saying it is fixed, using GITHUB_CREATE_AN_ISSUE_COMMENT is the appropriate tool as it creates a new comment on an existing issue, specifically issue #42.",
+      "error": null
+    },
+    {
+      "id": "t07",
+      "expected": "GOOGLEDRIVE_UPLOAD_FILE",
+      "chosen": "GOOGLEDRIVE_UPLOAD_FILE",
+      "correct": true,
+      "valid": true,
+      "category": "create-variant",
+      "difficulty": "medium",
+      "reasoning": "GOOGLEDRIVE_UPLOAD_FILE is the most suitable tool for uploading the local file report.pdf to a Google Drive folder, as it allows uploading files up to 5mb and can move the file to a specified folder if a valid folder ID is provided.",
+      "error": null
+    },
+    {
+      "id": "t08",
+      "expected": "GOOGLEDRIVE_CREATE_FILE",
+      "chosen": "GOOGLEDRIVE_CREATE_FILE",
+      "correct": true,
+      "valid": true,
+      "category": "create-variant",
+      "difficulty": "medium",
+      "reasoning": "This tool is suitable for creating empty folders as it focuses on creating new files or folders with their respective data and permissions.",
+      "error": null
+    },
+    {
+      "id": "t09",
+      "expected": "GOOGLEDRIVE_UPDATE_PERMISSION",
+      "chosen": "GOOGLEDRIVE_UPDATE_PERMISSION",
+      "correct": true,
+      "valid": true,
+      "category": "read-vs-write",
+      "difficulty": "medium",
+      "reasoning": "To change the share for alice@example.com from a reader to an editor, use GOOGLEDRIVE_UPDATE_PERMISSION to modify the existing permission, rather than creating a new one with GOOGLEDRIVE_CREATE_PERMISSION.",
+      "error": null
+    },
+    {
+      "id": "t10",
+      "expected": "GOOGLEDRIVE_CREATE_PERMISSION",
+      "chosen": "GOOGLEDRIVE_CREATE_PERMISSION",
+      "correct": true,
+      "valid": true,
+      "category": "read-vs-write",
+      "difficulty": "medium",
+      "reasoning": "To share a Drive document with a new user who currently has no access, use GOOGLEDRIVE_CREATE_PERMISSION as it allows creating a permission for a file or shared drive, enabling you to share the document with the new user.",
+      "error": null
+    },
+    {
+      "id": "t11",
+      "expected": "GITHUB_MERGE_A_PULL_REQUEST",
+      "chosen": "GITHUB_MERGE_A_PULL_REQUEST",
+      "correct": true,
+      "valid": true,
+      "category": "read-vs-write",
+      "difficulty": "easy",
+      "reasoning": "To merge pull request #10, the tool 'GITHUB_MERGE_A_PULL_REQUEST' is suitable as it specifically merges an open and mergeable pull request, ensuring the request is handled correctly.",
+      "error": null
+    },
+    {
+      "id": "t12",
+      "expected": "GITHUB_CREATE_AN_ORGANIZATION_REPOSITORY",
+      "chosen": "GITHUB_CREATE_AN_ORGANIZATION_REPOSITORY",
+      "correct": true,
+      "valid": true,
+      "category": "scope",
+      "difficulty": "medium",
+      "reasoning": "This tool creates a new repository within a specified GitHub organization, ensuring the desired repository belongs to the Acme organization.",
+      "error": null
+    },
+    {
+      "id": "t13",
+      "expected": "GITHUB_CREATE_A_REPOSITORY_FOR_THE_AUTHENTICATED_USER",
+      "chosen": "GITHUB_CREATE_A_REPOSITORY_FOR_THE_AUTHENTICATED_USER",
+      "correct": true,
+      "valid": true,
+      "category": "scope",
+      "difficulty": "medium",
+      "reasoning": "This tool creates a new repository for the authenticated user, ensuring it belongs to your personal account.",
+      "error": null
+    },
+    {
+      "id": "t14",
+      "expected": "GITHUB_GET_A_COMMIT",
+      "chosen": "GITHUB_GET_A_COMMIT",
+      "correct": true,
+      "valid": true,
+      "category": "functional-overlap",
+      "difficulty": "easy",
+      "reasoning": "To get details of a specific commit, GITHUB_GET_A_COMMIT is the appropriate tool as it accepts a commit reference (in this case, 'abc123') and provides detailed information about the commit.",
+      "error": null
+    },
+    {
+      "id": "t15",
+      "expected": "GITHUB_LIST_COMMITS",
+      "chosen": "GITHUB_LIST_COMMITS",
+      "correct": true,
+      "valid": true,
+      "category": "functional-overlap",
+      "difficulty": "easy",
+      "reasoning": "The GITHUB_LIST_COMMITS tool allows filtering by main branch, providing a broader view of commits on the main branch compared to retrieving a single commit (GITHUB_GET_A_COMMIT).",
+      "error": null
+    },
+    {
+      "id": "t16",
+      "expected": "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
+      "chosen": "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
+      "correct": true,
+      "valid": true,
+      "category": "functional-overlap",
+      "difficulty": "hard",
+      "reasoning": "The GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS tool allows for more comprehensive search criteria, including issues and pull requests, while the other tool only searches issues.",
+      "error": null
+    },
+    {
+      "id": "t17",
+      "expected": "SLACK_CHAT_POST_MESSAGE",
+      "chosen": "SLACK_CHAT_POST_MESSAGE",
+      "correct": true,
+      "valid": true,
+      "category": "cross-toolkit",
+      "difficulty": "easy",
+      "reasoning": "This tool is specifically designed for posting messages to Slack channels, direct messages, or private groups, catering to the user's request to send a message to the #general channel in Slack.",
+      "error": null
+    },
+    {
+      "id": "t18",
+      "expected": "TELEGRAM_SEND_MESSAGE",
+      "chosen": "TELEGRAM_SEND_MESSAGE",
+      "correct": true,
+      "valid": true,
+      "category": "cross-toolkit",
+      "difficulty": "easy",
+      "reasoning": "The user's request involves sending a text message to a Telegram chat, which TELEGRAM_SEND_MESSAGE is designed to do, while SLACK_CHAT_POST_MESSAGE is not suitable for sending messages to a specific Telegram chat.",
+      "error": null
+    },
+    {
+      "id": "t19",
+      "expected": "JIRA_CREATE_ISSUE",
+      "chosen": "JIRA_CREATE_ISSUE",
+      "correct": true,
+      "valid": true,
+      "category": "cross-toolkit",
+      "difficulty": "medium",
+      "reasoning": "To file a bug in the specified Jira project PROJ, JIRA_CREATE_ISSUE is the appropriate tool as it creates Jira issues tailored to the project's requirements and handles assignee selection.",
+      "error": null
+    },
+    {
+      "id": "t20",
+      "expected": "CLICKUP_CREATE_TASK",
+      "chosen": "CLICKUP_CREATE_TASK",
+      "correct": true,
+      "valid": true,
+      "category": "cross-toolkit",
+      "difficulty": "easy",
+      "reasoning": "CLICKUP_CREATE_TASK is more suitable for creating tasks within a specific ClickUp list, allowing for subtasks and compatibility with the provided tool.",
+      "error": null
+    },
+    {
+      "id": "t21",
+      "expected": "GITHUB_REMOVE_A_LABEL_FROM_AN_ISSUE",
+      "chosen": "GITHUB_REMOVE_A_LABEL_FROM_AN_ISSUE",
+      "correct": true,
+      "valid": true,
+      "category": "trap-keyword",
+      "difficulty": "hard",
+      "reasoning": "This tool removes a single label from an issue, fulfilling the user's request to remove the 'bug' label while preserving the other labels on GitHub issue #5.",
+      "error": null
+    },
+    {
+      "id": "t22",
+      "expected": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_ZIP",
+      "chosen": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_ZIP",
+      "correct": true,
+      "valid": true,
+      "category": "trap-keyword",
+      "difficulty": "medium",
+      "reasoning": "This tool is specifically designed for downloading a repository's source code as a zip archive for a given git reference, meeting the user's request for tag v1.2.",
+      "error": null
+    },
+    {
+      "id": "t23",
+      "expected": "GITHUB_GET_REPOSITORY_CONTENT",
+      "chosen": "GITHUB_GET_REPOSITORY_CONTENT",
+      "correct": true,
+      "valid": true,
+      "category": "trap-keyword",
+      "difficulty": "medium",
+      "reasoning": "To read the contents of README.md, we need to retrieve the file's base64 encoded content, which is provided by GITHUB_GET_REPOSITORY_CONTENT, while GITHUB_GET_A_REPOSITORY retrieves detailed information about the repository, not the file content.",
+      "error": null
+    },
+    {
+      "id": "t24",
+      "expected": "GITHUB_CREATE_OR_UPDATE_FILE_CONTENTS",
+      "chosen": "GITHUB_CREATE_OR_UPDATE_FILE_CONTENTS",
+      "correct": true,
+      "valid": true,
+      "category": "read-vs-write",
+      "difficulty": "medium",
+      "reasoning": "This tool is suitable for updating an existing file in the repo, as requested, while the other tool is for retrieving file content or directory metadata.",
+      "error": null
+    },
+    {
+      "id": "t25",
+      "expected": "GITHUB_GET_A_BRANCH",
+      "chosen": "GITHUB_GET_A_BRANCH",
+      "correct": true,
+      "valid": true,
+      "category": "functional-overlap",
+      "difficulty": "easy",
+      "reasoning": "To get the details of the main branch, we should use GITHUB_GET_A_BRANCH as it specifically retrieves information for a given branch.",
+      "error": null
+    },
+    {
+      "id": "t26",
+      "expected": "GITHUB_LOCK_AN_ISSUE",
+      "chosen": "GITHUB_LOCK_AN_ISSUE",
+      "correct": true,
+      "valid": true,
+      "category": "trap-keyword",
+      "difficulty": "medium",
+      "reasoning": "This tool is specifically designed for locking an issue's conversation, fulfilling the user's request to lock the conversation and prevent comments.",
+      "error": null
+    },
+    {
+      "id": "t27",
+      "expected": "GITHUB_ADD_ASSIGNEES_TO_AN_ISSUE",
+      "chosen": "GITHUB_UPDATE_AN_ISSUE",
+      "correct": false,
+      "valid": true,
+      "category": "trap-keyword",
+      "difficulty": "hard",
+      "reasoning": "This tool allows updating an issue's assignees without changing other fields, fulfilling the user's request.",
+      "error": null
+    }
+  ]
+}

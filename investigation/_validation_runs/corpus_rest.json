@@ -1,0 +1,124 @@
+{
+ "openai": {
+  "tools": 930,
+  "failures": 0,
+  "failure_types": [],
+  "failure_samples": [],
+  "tools_losing_keyword": {}
+ },
+ "openai_responses_strict": {
+  "tools": 930,
+  "failures": 114,
+  "failure_types": [
+   [
+    "ValueError",
+    114
+   ]
+  ],
+  "failure_samples": [
+   {
+    "slug": "GITHUB_ADD_AN_EMAIL_ADDRESS_FOR_THE_AUTHENTICATED_USER",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.emails.items: StrictSchemaIncompatibility(path='properties.emails.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_ADD_ASSIGNEES_TO_AN_ISSUE",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.assignees.items: StrictSchemaIncompatibility(path='properties.assignees.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_ADD_ORG_RUNNER_LABELS",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.labels.items: StrictSchemaIncompatibility(path='properties.labels.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_ADD_RUNNER_LABELS",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.labels.items: StrictSchemaIncompatibility(path='properties.labels.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_ADD_SOCIAL_ACCOUNTS_FOR_THE_AUTHENTICATED_USER",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.account_urls.items: StrictSchemaIncompatibility(path='properties.account_urls.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_ADD_USERS_TO_CODESPACES_ACCESS_FOR_AN_ORGANIZATION",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.selected_usernames.items: StrictSchemaIncompatibility(path='properties.selected_usernames.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_AUTH_USER_DOCKER_CONFLICT_PACKAGES_LIST",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: : StrictSchemaIncompatibility(path='', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_CONFIGURE_JITRUNNER_FOR_ORG",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.labels.items: StrictSchemaIncompatibility(path='properties.labels.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_CONFIGURE_OIDCSUBJECT_CLAIM_TEMPLATE",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.include_claim_keys.items: StrictSchemaIncompatibility(path='properties.include_claim_keys.items', keyword='properties', detail='free-form object accepts arbitrary keys')"
+   },
+   {
+    "slug": "GITHUB_CREATE_AN_ISSUE",
+    "error_type": "ValueError",
+    "error": "strict-unsupported: properties.assignees.items: StrictSchemaIncompatibility(path='properties.assignees.items', keyword='properties', detail='free-form object accepts arbitrary keys'); properties.labels.items: StrictSchemaIncompatibility(path='properties.labels.items', keyword='properties', detail='f"
+   }
+  ],
+  "tools_losing_keyword": {
+   "examples": 807,
+   "default": 321,
+   "format": 4
+  }
+ },
+ "anthropic": {
+  "tools": 930,
+  "failures": 0,
+  "failure_types": [],
+  "failure_samples": [],
+  "tools_losing_keyword": {}
+ },
+ "gemini_genai(composio_gemini)": {
+  "tools": 930,
+  "failures": 1,
+  "failure_types": [
+   [
+    "ValueError",
+    1
+   ]
+  ],
+  "failure_samples": [
+   {
+    "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
+    "error_type": "ValueError",
+    "error": "Failed to parse the parameter permission: composio.utils.schema_converter.Permission of function GOOGLEDRIVE_UPDATE_PERMISSION for automatic function calling.Automatic function calling works best with simpler function signature schema, consider manually parsing your function declaration for function"
+   }
+  ],
+  "tools_losing_keyword": {
+   "title": 915,
+   "examples": 895,
+   "default": 355,
+   "enum": 179,
+   "additionalProperties": 34,
+   "format": 19,
+   "file_uploadable": 1
+  }
+ },
+ "google_adk(composio_google_adk)": {
+  "tools": 930,
+  "failures": 0,
+  "failure_types": [],
+  "failure_samples": [],
+  "tools_losing_keyword": {
+   "examples": 896,
+   "default": 356,
+   "format": 20,
+   "title": 18,
+   "enum": 3,
+   "file_uploadable": 1,
+   "items": 1
+  }
+ }
+}

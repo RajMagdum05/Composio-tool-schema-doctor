@@ -1,0 +1,25 @@
+{
+  "input": "composio-upstream/ts/packages/cli/test/__mocks__/tools.json",
+  "source": "mock",
+  "tools": 930,
+  "with_schema": 930,
+  "with_tags": 892,
+  "available_providers": {
+    "openai": true,
+    "openai_strict": true,
+    "anthropic": true,
+    "google_vertex": true,
+    "gemini": true,
+    "google_adk": true
+  },
+  "schema_keyword_prevalence": {
+    "title": 930,
+    "examples": 896,
+    "default": 356,
+    "enum": 182,
+    "items": 88,
+    "additionalProperties": 35,
+    "format": 20,
+    "file_uploadable": 1
+  }
+}

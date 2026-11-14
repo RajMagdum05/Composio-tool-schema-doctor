@@ -1,0 +1,39 @@
+{
+  "input": "tool-schema-doctor/out/evidence/gemini_cases.json",
+  "tools": 2,
+  "summary": {
+    "gemini": {
+      "error": 1,
+      "transformed": 1
+    }
+  },
+  "results": [
+    {
+      "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
+      "provider": "gemini",
+      "status": "error",
+      "error_type": "ValueError",
+      "message": "Failed to parse the parameter permission: composio.utils.schema_converter.Permission of function GOOGLEDRIVE_UPDATE_PERMISSION for automatic function calling.Automatic function calling works best with simpler function signature schema, consider manually parsing your function declaration for function GOOGLEDRIVE_UPDATE_PERMISSION.",
+      "schema_path": "/properties/permission",
+      "where": "\\google\\genai\\_automatic_function_calling_util.py",
+      "dropped_keywords": [],
+      "added_keywords": []
+    },
+    {
+      "slug": "GITHUB_ACTIVITY_LIST_REPO_S_STARRED_BY_AUTHENTICATED_USER",
+      "provider": "gemini",
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "default",
+        "enum",
+        "examples",
+        "title"
+      ],
+      "added_keywords": []
+    }
+  ]
+}

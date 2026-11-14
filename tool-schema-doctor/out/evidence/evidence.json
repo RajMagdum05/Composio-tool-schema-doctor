@@ -1,0 +1,291 @@
+{
+  "generated_at": "2026-11-14T06:51:48+00:00",
+  "provenance": {
+    "upstream_repo": "https://github.com/ComposioHQ/composio",
+    "upstream_commit": "6aa3f31ecf38fc5f9ea10d67e31a43ede2e2c693",
+    "upstream_commit_date": "2026-11-13T18:36:03+04:00",
+    "upstream_commit_subject": "fix(core): tolerate malformed tool schemas instead of failing the whole call (#4780)",
+    "upstream_dirty_files": 0,
+    "fixtures": {
+      "composio-upstream/ts/packages/cli/test/__mocks__/tools.json": "b28f3c96499276f5ee0bfde7fc2c8e8021fb45a3",
+      "composio-upstream/docs/public/data/toolkits.json": "6a81b753b2679cddae499cdd0019a4c89c4afbe6"
+    },
+    "python": "3.12.5",
+    "versions": {
+      "composio": "0.32.0",
+      "composio-openai": "0.32.0",
+      "composio-anthropic": "0.32.0",
+      "composio-google": "0.32.0",
+      "composio-gemini": "0.32.0",
+      "composio-google-adk": "0.32.0",
+      "openai": "3.50.0",
+      "anthropic": "2.8.0",
+      "google-cloud-aiplatform": "2.9.0",
+      "google-genai": "2.34.0",
+      "google-adk": "2.14.1",
+      "groq": "1.7.0"
+    }
+  },
+  "commands": {
+    "inspect": {
+      "id": "inspect",
+      "command": "tool-schema-doctor inspect --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json",
+      "exit_code": 0,
+      "seconds": 0.6,
+      "output_file": "out/evidence/cli/inspect.txt"
+    },
+    "strict": {
+      "id": "strict",
+      "command": "tool-schema-doctor compatibility --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --providers openai_strict",
+      "exit_code": 0,
+      "seconds": 11.2,
+      "output_file": "out/evidence/cli/strict.txt"
+    },
+    "hints": {
+      "id": "hints",
+      "command": "tool-schema-doctor lint --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --rules missing-action-hint,destructive-verb-without-destructive-hint",
+      "exit_code": 0,
+      "seconds": 0.6,
+      "output_file": "out/evidence/cli/hints.txt"
+    },
+    "names": {
+      "id": "names",
+      "command": "tool-schema-doctor lint --input composio-upstream/docs/public/data/toolkits.json --rules duplicate-display-name-in-toolkit,description-repeats-name",
+      "exit_code": 0,
+      "seconds": 3.3,
+      "output_file": "out/evidence/cli/names.txt"
+    },
+    "vertex": {
+      "id": "vertex",
+      "command": "tool-schema-doctor compatibility --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --providers google_vertex",
+      "exit_code": 0,
+      "seconds": 23.8,
+      "output_file": "out/evidence/cli/vertex.txt"
+    },
+    "gemini": {
+      "id": "gemini",
+      "command": "tool-schema-doctor compatibility --input tool-schema-doctor/out/evidence/gemini_cases.json --providers gemini --verbose",
+      "exit_code": 0,
+      "seconds": 15.0,
+      "output_file": "out/evidence/cli/gemini.txt"
+    },
+    "eval": {
+      "id": "eval",
+      "command": "tool-schema-doctor eval",
+      "exit_code": 0,
+      "seconds": 1.6,
+      "output_file": "out/evidence/cli/eval.txt"
+    },
+    "full": {
+      "id": "full",
+      "command": "tool-schema-doctor compatibility --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --verbose -o tool-schema-doctor/out/compat_full.json",
+      "exit_code": 0,
+      "seconds": 1052.9
+    }
+  },
+  "gemini_enum_example": "GITHUB_ACTIVITY_LIST_REPO_S_STARRED_BY_AUTHENTICATED_USER",
+  "tests": {
+    "exit_code": 0,
+    "seconds": 87.6,
+    "junit_file": "out/evidence/test-results.xml",
+    "last_line": "59 passed, 2 warnings in 82.66s (0:01:22)",
+    "tests": 59,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 59,
+    "cases": [
+      "tests.test_cli::test_inspect",
+      "tests.test_cli::test_lint",
+      "tests.test_cli::test_compatibility_fast_provider",
+      "tests.test_cli::test_report_markdown_no_compat",
+      "tests.test_cli::test_report_writes_files",
+      "tests.test_cli::test_unknown_provider_exit2",
+      "tests.test_cli::test_missing_input_exit2",
+      "tests.test_compat::test_vertex_nested_examples_errors",
+      "tests.test_compat::test_vertex_file_uploadable_errors",
+      "tests.test_compat::test_vertex_top_level_examples_is_stripped_not_error",
+      "tests.test_compat::test_gemini_drops_enum",
+      "tests.test_compat::test_gemini_real_nested_object_failure",
+      "tests.test_compat::test_openai_strict_reports_sdk_reason_for_free_form_object",
+      "tests.test_compat::test_offline_blocks_inside_and_restores_after",
+      "tests.test_compat::test_offline_restores_even_if_the_run_raises",
+      "tests.test_compat::test_run_compatibility_does_not_leave_network_blocked",
+      "tests.test_compat::test_clip_message_keeps_short_and_labels_long",
+      "tests.test_compat::test_long_strict_message_is_reported_in_full",
+      "tests.test_compat::test_baseline_no_error[openai]",
+      "tests.test_compat::test_baseline_no_error[openai_strict]",
+      "tests.test_compat::test_baseline_no_error[anthropic]",
+      "tests.test_compat::test_baseline_no_error[google_vertex]",
+      "tests.test_compat::test_baseline_no_error[gemini]",
+      "tests.test_compat::test_baseline_no_error[google_adk]",
+      "tests.test_compat::test_unavailable_not_counted_as_error",
+      "tests.test_dashboard::test_dashboard_renders_without_exceptions",
+      "tests.test_dashboard::test_fix_list_has_five_findings_and_all_pinned_tests_pass",
+      "tests.test_dashboard::test_fixed_upstream_finding_is_labelled_and_listed_last",
+      "tests.test_dashboard::test_dashboard_works_without_the_composio_checkout",
+      "tests.test_dashboard::test_check_a_tool_shows_the_full_untruncated_adapter_error",
+      "tests.test_eval::test_dataset_loads_and_shapes",
+      "tests.test_eval::test_dataset_integrity_against_real_corpus",
+      "tests.test_eval::test_metrics_with_stub_perfect_selector",
+      "tests.test_eval::test_metrics_with_stub_always_first",
+      "tests.test_eval::test_invalid_slug_is_counted",
+      "tests.test_eval::test_parse_selection_tolerates_case",
+      "tests.test_eval::test_parse_selection_handles_non_dict_and_garbage[[]]",
+      "tests.test_eval::test_parse_selection_handles_non_dict_and_garbage[5]",
+      "tests.test_eval::test_parse_selection_handles_non_dict_and_garbage[null]",
+      "tests.test_eval::test_parse_selection_handles_non_dict_and_garbage[\"text\"]",
+      "tests.test_eval::test_parse_selection_handles_non_dict_and_garbage[not json at all]",
+      "tests.test_eval::test_parse_selection_handles_non_dict_and_garbage[]",
+      "tests.test_eval::test_parse_selection_missing_slug",
+      "tests.test_lint::test_missing_action_hint_positive_and_negative",
+      "tests.test_lint::test_missing_action_hint_skipped_on_catalog",
+      "tests.test_lint::test_destructive_verb_without_hint",
+      "tests.test_lint::test_duplicate_display_name_in_toolkit",
+      "tests.test_lint::test_description_repeats_name",
+      "tests.test_lint::test_description_too_long_and_empty",
+      "tests.test_lint::test_all_rules_registered",
+      "tests.test_loader::test_parse_mock_shape",
+      "tests.test_loader::test_parse_catalog_shape",
+      "tests.test_loader::test_malformed_raises",
+      "tests.test_loader::test_load_missing_file",
+      "tests.test_loader::test_load_invalid_json",
+      "tests.test_loader::test_load_roundtrip",
+      "tests.test_report::test_report_renders_unicode_without_crashing",
+      "tests.test_report::test_report_failing_conversions_table",
+      "tests.test_report::test_catalog_source_skips_compat"
+    ]
+  },
+  "causes": {
+    "destructive_hint_tags": {
+      "GITHUB_DISABLE_A_WORKFLOW": [
+        "openWorldHint",
+        "updateHint"
+      ],
+      "GITHUB_DISABLE_REPOSITORY_ACTIONS_IN_ORG": [
+        "idempotentHint",
+        "openWorldHint",
+        "updateHint"
+      ],
+      "GITHUB_FORCE_CANCEL_A_WORKFLOW_RUN": [
+        "openWorldHint",
+        "updateHint"
+      ],
+      "GOOGLEDRIVE_DELETE_COMMENT": [],
+      "GOOGLEDRIVE_DELETE_REPLY": [],
+      "GOOGLE_ADMIN_DELETE_USER": [],
+      "GOOGLE_ADMIN_REMOVE_USER_ALIAS": [],
+      "GOOGLE_ADMIN_REMOVE_USER_FROM_GROUP": [],
+      "GOOGLE_CLASSROOM_COURSES_ANNOUNCEMENTS_DELETE": [],
+      "GOOGLE_CLASSROOM_COURSES_DELETE": [],
+      "GOOGLE_CLASSROOM_COURSES_TOPICS_DELETE": [],
+      "GOOGLE_CLASSROOM_COURSE_WORK_DELETE": []
+    },
+    "tools_with_enum": 182,
+    "dropped_by_provider": {
+      "google_vertex": {
+        "examples": 890,
+        "additionalProperties": 26,
+        "title": 18
+      },
+      "gemini": {
+        "title": 915,
+        "examples": 895,
+        "default": 355,
+        "enum": 179,
+        "additionalProperties": 34,
+        "format": 19,
+        "file_uploadable": 1
+      },
+      "google_adk": {
+        "examples": 896,
+        "default": 356,
+        "format": 20,
+        "title": 18,
+        "enum": 3,
+        "file_uploadable": 1,
+        "items": 1
+      },
+      "openai_strict": {
+        "examples": 807,
+        "default": 321,
+        "format": 4
+      }
+    },
+    "strict_unsupported_tools": 114,
+    "strict_by_keyword": {
+      "properties": 97,
+      "additionalProperties": 27
+    },
+    "strict_example": {
+      "properties": {
+        "slug": "GITHUB_ADD_AN_EMAIL_ADDRESS_FOR_THE_AUTHENTICATED_USER",
+        "path": "properties.emails.items",
+        "detail": "free-form object accepts arbitrary keys"
+      },
+      "additionalProperties": {
+        "slug": "GITHUB_CREATE_AN_ORGANIZATION_REPOSITORY",
+        "path": "properties.custom_properties",
+        "detail": "object accepts arbitrary keys"
+      }
+    },
+    "adapter_errors": [
+      {
+        "slug": "GOOGLEDRIVE_FILES_MODIFY_LABELS",
+        "provider": "google_vertex",
+        "error_type": "ParseError",
+        "schema_path": "/properties/label_modifications/items/properties/field_modifications/items/properties/set_date_values/examples",
+        "message": "Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[label_modifications].items.properties[field_modifications].items.properties[set_date_values]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".....",
+        "where": "\\google\\protobuf\\json_format.py"
+      },
+      {
+        "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
+        "provider": "google_vertex",
+        "error_type": "ParseError",
+        "schema_path": "/properties/permission/properties/role/examples",
+        "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[permission].properties[role]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+        "where": "\\google\\protobuf\\json_format.py"
+      },
+      {
+        "slug": "GOOGLEDRIVE_UPLOAD_FILE",
+        "provider": "google_vertex",
+        "error_type": "ParseError",
+        "schema_path": "/properties/file_to_upload/file_uploadable",
+        "message": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"fileUploadable\" at \"Schema.properties[file_to_upload]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".",
+        "where": "\\google\\protobuf\\json_format.py"
+      },
+      {
+        "slug": "GOOGLE_ANALYTICS_CREATE_EXPANDED_DATA_SET",
+        "provider": "google_vertex",
+        "error_type": "ParseError",
+        "schema_path": "/properties/expandedDataSet/properties/dimensionNames/examples",
+        "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[expandedDataSet].properties[dimensionNames]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+        "where": "\\google\\protobuf\\json_format.py"
+      },
+      {
+        "slug": "GOOGLE_CLASSROOM_COURSE_WORK_PATCH",
+        "provider": "google_vertex",
+        "error_type": "ParseError",
+        "schema_path": "/properties/dueDate/properties/day/examples",
+        "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[dueDate].properties[day]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+        "where": "\\google\\protobuf\\json_format.py"
+      },
+      {
+        "slug": "GOOGLE_MAPS_MAPS_EMBED_API",
+        "provider": "google_vertex",
+        "error_type": "ParseError",
+        "schema_path": "/properties/directions_params/properties/avoid/examples",
+        "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[directions_params].properties[avoid]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+        "where": "\\google\\protobuf\\json_format.py"
+      },
+      {
+        "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
+        "provider": "gemini",
+        "error_type": "ValueError",
+        "schema_path": "/properties/permission",
+        "message": "Failed to parse the parameter permission: composio.utils.schema_converter.Permission of function GOOGLEDRIVE_UPDATE_PERMISSION for automatic function calling.Automatic function calling works best with simpler function signature schema, consider manually parsing your function declaration for function GOOGLEDRIVE_UPDATE_PERMISSION.",
+        "where": "\\google\\genai\\_automatic_function_calling_util.py"
+      }
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{
+ "mock_corpus": {
+  "path": "ts\\packages\\cli\\test\\__mocks__\\tools.json",
+  "tools": 930,
+  "slug_prefix_counts": [
+   [
+    "GITHUB",
+    823
+   ],
+   [
+    "GOOGLE",
+    56
+   ],
+   [
+    "GOOGLEDRIVE",
+    51
+   ]
+  ],
+  "tools_with_no_hint_tag": 85,
+  "tools_with_no_action_hint(readOnly/create/update/destructive)": 227,
+  "pct_no_action_hint": 24.4,
+  "no_action_hint_sample": [
+   "GITHUB_CONFIGURE_JITRUNNER_FOR_ORG",
+   "GITHUB_CREATE_AN_AUTOLINK_REFERENCE_FOR_A_REPOSITORY",
+   "GITHUB_CREATE_AN_ENVIRONMENT_VARIABLE",
+   "GITHUB_CREATE_AN_ISSUE",
+   "GITHUB_CREATE_AN_ISSUE_COMMENT",
+   "GITHUB_CREATE_AN_ORGANIZATION_PROJECT",
+   "GITHUB_CREATE_AN_ORGANIZATION_REPOSITORY",
+   "GITHUB_CREATE_AN_ORGANIZATION_VARIABLE",
+   "GITHUB_CREATE_AN_ORGANIZATION_WEBHOOK",
+   "GITHUB_CREATE_A_BLOB"
+  ],
+  "destructive_verb_slug_without_destructiveHint": 16,
+  "destructive_verb_sample": [
+   "GITHUB_CREATE_A_REMOVE_TOKEN_FOR_AN_ORGANIZATION",
+   "GITHUB_CREATE_A_REMOVE_TOKEN_FOR_A_REPOSITORY",
+   "GITHUB_DISABLE_A_WORKFLOW",
+   "GITHUB_DISABLE_REPOSITORY_ACTIONS_IN_ORG",
+   "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_TAR",
+   "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_ZIP",
+   "GITHUB_FORCE_CANCEL_A_WORKFLOW_RUN",
+   "GOOGLEDRIVE_DELETE_COMMENT",
+   "GOOGLEDRIVE_DELETE_REPLY",
+   "GOOGLE_ADMIN_DELETE_USER",
+   "GOOGLE_ADMIN_REMOVE_USER_ALIAS",
+   "GOOGLE_ADMIN_REMOVE_USER_FROM_GROUP",
+   "GOOGLE_CLASSROOM_COURSES_ANNOUNCEMENTS_DELETE",
+   "GOOGLE_CLASSROOM_COURSES_DELETE",
+   "GOOGLE_CLASSROOM_COURSES_TOPICS_DELETE"
+  ],
+  "readOnly_and_destructive_both": [],
+  "tools_using_schema_keyword": {
+   "title": 930,
+   "examples": 896,
+   "default": 356,
+   "enum": 182,
+   "additionalProperties": 35,
+   "file_uploadable": 1
+  },
+  "tools_with_HEAD_literal_in_schema": [
+   "GITHUB_GET_A_TREE"
+  ],
+  "duplicate_slugs": [],
+  "duplicate_names": {
+   "List repositories starred by the authenticated user": 2,
+   "List stargazers": 2,
+   "Star a repository for the authenticated user": 2,
+   "Create an issue": 2,
+   "Create an issue comment": 2,
+   "Create an organization repository": 2,
+   "Create a fork": 2,
+   "Create a gist": 2,
+   "Create a pull request": 2,
+   "Create a repository for the authenticated user": 2,
+   "Create a review comment for a pull request": 2,
+   "Create a review for a pull request": 2,
+   "Create or update file contents": 2,
+   "Get emojis": 2,
+   "Get all contributor commit activity": 2,
+   "Get an issue": 2,
+   "Get a commit": 2,
+   "Get a pull request": 2,
+   "Get a user": 2,
+   "Get contextual information for a user": 2,
+   "Get repository content": 2,
+   "Get the authenticated user": 2,
+   "Get the weekly commit activity": 2,
+   "List public gists": 2,
+   "Get GitHub API root": 2,
+   "List assignees": 2,
+   "List issue events for a repository": 2,
+   "List repository issues": 2,
+   "List branches": 2,
+   "List commits": 2,
+   "List followers of the authenticated user": 2,
+   "List global security advisories": 2,
+   "List organization repositories": 2,
+   "List public email addresses for the authenticated user": 2,
+   "List pull requests": 2,
+   "List repositories for a user": 2,
+   "List repositories for the authenticated user": 2,
+   "List repository contributors": 2,
+   "List social accounts for a user": 2,
+   "Search repositories": 2,
+   "List CourseWorkMaterials": 2
+  }
+ },
+ "docs_catalog": {
+  "path": "docs\\public\\data\\toolkits.json",
+  "toolkits": 1743,
+  "tools": 84004,
+  "tool_fields": [
+   [
+    "slug",
+    84004
+   ],
+   [
+    "name",
+    84004
+   ],
+   [
+    "description",
+    84004
+   ],
+   [
+    "instant",
+    2390
+   ]
+  ],
+  "duplicate_slugs_global": 0,
+  "duplicate_slug_sample": [],
+  "within_toolkit_duplicate_name_groups": 285,
+  "within_toolkit_duplicate_sample": [
+   [
+    "composio",
+    "wait for connection",
+    2
+   ],
+   [
+    "github",
+    "check if pull request merged",
+    2
+   ],
+   [
+    "github",
+    "check if repo starred by auth user",
+    2
+   ],
+   [
+    "github",
+    "list organizations for a user",
+    2
+   ],
+   [
+    "github",
+    "search issues and pull requests",
+    2
+   ],
+   [
+    "slack",
+    "send message",
+    2
+   ],
+   [
+    "slack",
+    "leave conversation channel",
+    2
+   ],
+   [
+    "slack",
+    "set user presence",
+    2
+   ],
+   [
+    "slack",
+    "start rtm session",
+    2
+   ],
+   [
+    "slack",
+    "set slack user profile information",
+    2
+   ],
+   [
+    "supabase",
+    "options for resumable upload sign",
+    2
+   ],
+   [
+    "outlook",
+    "create user calendar event attachment",
+    2
+   ],
+   [
+    "outlook",
+    "create user contact extension",
+    2
+   ],
+   [
+    "outlook",
+    "delete contact extension",
+    2
+   ],
+   [
+    "outlook",
+    "delete message extension",
+    2
+   ]
+  ],
+  "cross_toolkit_duplicate_name_groups": 6201,
+  "cross_toolkit_sample": [
+   [
+    "list users",
+    112
+   ],
+   [
+    "delete webhook",
+    102
+   ],
+   [
+    "create webhook",
+    92
+   ],
+   [
+    "list projects",
+    92
+   ],
+   [
+    "list webhooks",
+    89
+   ],
+   [
+    "get user",
+    85
+   ],
+   [
+    "create contact",
+    84
+   ],
+   [
+    "get current user",
+    84
+   ],
+   [
+    "update contact",
+    76
+   ],
+   [
+    "create project",
+    75
+   ]
+  ],
+  "description_equals_name_or_slug": 678,
+  "description_equals_sample": [
+   "GITHUB_GET_AN_ORGANIZATION",
+   "GITHUB_LIST_ORGANIZATION_MEMBERSHIPS_FOR_THE_AUTHENTICATED_U",
+   "SUPABASE_CANCEL_PROJECT_RESTORATION",
+   "SUPABASE_GET_DISK_UTILIZATION",
+   "SUPABASE_GET_ORGANIZATION_ENTITLEMENTS",
+   "OUTLOOK_DELETE_ME_MAIL_FOLDERS_CHILD_FOLDERS_MESSAGES_EXTENS",
+   "MICROSOFT_TEAMS_CREATE_WORKBOOK_SESSION",
+   "MICROSOFT_TEAMS_DOWNLOAD_DRIVE_ITEM",
+   "MICROSOFT_TEAMS_INSPECT_WORKBOOK",
+   "MICROSOFT_TEAMS_LIST_WORKBOOK_WORKSHEETS"
+  ],
+  "empty_descriptions": 0,
+  "description_length_p50_p95_p99_max": [
+   160,
+   537,
+   943,
+   60023
+  ],
+  "descriptions_over_1024_chars": 678
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-11-14",
+  "method": "GitHub API: compare 6aa3f31...next, PR #4751, release PR #5394, commit history of python/providers/gemini",
+  "pinned_commit": "6aa3f31ecf38fc5f9ea10d67e31a43ede2e2c693",
+  "next_ahead_by": 11,
+  "changed_since_pin_in_scope": [
+    "python/providers/google/composio_google/provider.py",
+    "python/tests/test_google_provider.py"
+  ],
+  "unchanged_since_pin_in_scope": [
+    "python/providers/gemini/",
+    "python/composio/utils/strict_schema.py",
+    "python/composio/core/provider/",
+    "python/composio/core/models/tool_router.py",
+    "ts/packages/cli/test/__mocks__/tools.json"
+  ],
+  "findings": {
+    "vertex": {
+      "status": "fixed_upstream",
+      "issue": 4750,
+      "issue_url": "https://github.com/ComposioHQ/composio/issues/4750",
+      "pr": 4751,
+      "pr_url": "https://github.com/ComposioHQ/composio/pull/4751",
+      "merged_at": "2026-11-13T16:56:14Z",
+      "merge_commit": "495be0f0f1f43fba9f6eb8248d351631d732af61",
+      "release": "Python SDK 0.33.0 (release PR #5394, open when checked)",
+      "release_url": "https://github.com/ComposioHQ/composio/pull/5394",
+      "verified_locally": false,
+      "note": "Replaces top-level-only stripping with a recursive allowlist (_to_vertex_schema)."
+    },
+    "gemini": {
+      "status": "open",
+      "note": "PR #4751 states composio_gemini is not affected; no commits to python/providers/gemini since 2026-11-09."
+    },
+    "strict": {"status": "open", "note": "strict_schema.py and the OpenAI providers are unchanged since the pin."},
+    "hints": {"status": "open", "note": "The 930-tool fixture is unchanged since the pin."},
+    "names": {"status": "open", "note": "Docs catalog snapshot; not re-checked."}
+  }
+}

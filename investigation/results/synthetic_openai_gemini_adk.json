@@ -1,0 +1,2058 @@
+[
+ {
+  "case": "baseline_simple",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "owner": {
+     "type": "string",
+     "description": "Repo owner"
+    }
+   },
+   "required": [
+    "owner"
+   ]
+  }
+ },
+ {
+  "case": "baseline_simple",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "owner": {
+      "type": "string",
+      "description": "Repo owner"
+     }
+    },
+    "required": [
+     "owner"
+    ],
+    "additionalProperties": false
+   },
+   "changes": []
+  }
+ },
+ {
+  "case": "baseline_simple",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "owner": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "owner"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "baseline_simple",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "owner": {
+      "title": "Owner",
+      "type": "string"
+     }
+    },
+    "required": [
+     "owner"
+    ],
+    "title": "BASELINE_SIMPLEParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "examples_top_level",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "q": {
+     "type": "string",
+     "examples": [
+      "foo",
+      "bar"
+     ]
+    }
+   },
+   "required": [
+    "q"
+   ]
+  }
+ },
+ {
+  "case": "examples_top_level",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "q": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "q"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.q: unsupported-keyword-stripped"
+   ]
+  }
+ },
+ {
+  "case": "examples_top_level",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "q": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "q"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "examples_top_level",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "q": {
+      "title": "Q",
+      "type": "string"
+     }
+    },
+    "required": [
+     "q"
+    ],
+    "title": "EXAMPLES_TOP_LEVELParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "examples_nested_object",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "filter": {
+     "type": "object",
+     "properties": {
+      "q": {
+       "type": "string",
+       "examples": [
+        "foo"
+       ]
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "examples_nested_object",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "filter": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "properties": {
+       "q": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      },
+      "required": [
+       "q"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "filter"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.filter.properties.q: unsupported-keyword-stripped",
+    "properties.filter.properties.q: optional-property-nullable",
+    "properties.filter: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "examples_nested_object",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "filter": {
+     "properties": {
+      "q": {
+       "type": "STRING"
+      }
+     },
+     "required": [
+      "q"
+     ],
+     "type": "OBJECT"
+    }
+   },
+   "required": [
+    "filter"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "examples_nested_object",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [
+   "additionalProperties",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "filter": {
+      "additionalProperties": true,
+      "title": "Filter",
+      "type": "object"
+     }
+    },
+    "required": [
+     "filter"
+    ],
+    "title": "EXAMPLES_NESTED_OBJECTParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "examples_in_array_items",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "tags": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "examples": [
+       "x"
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "examples_in_array_items",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "tags": {
+      "type": [
+       "array",
+       "null"
+      ],
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "tags"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.tags.items: unsupported-keyword-stripped",
+    "properties.tags: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "examples_in_array_items",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "tags": {
+     "items": {
+      "type": "STRING"
+     },
+     "type": "ARRAY"
+    }
+   },
+   "required": [
+    "tags"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "examples_in_array_items",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "tags": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+     }
+    },
+    "required": [
+     "tags"
+    ],
+    "title": "EXAMPLES_IN_ARRAY_ITEMSParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "file_uploadable_top_level",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "attachment": {
+     "type": "string",
+     "format": "path",
+     "file_uploadable": true,
+     "description": "File to upload"
+    }
+   },
+   "required": [
+    "attachment"
+   ]
+  }
+ },
+ {
+  "case": "file_uploadable_top_level",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [
+   "format"
+  ],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "attachment": {
+      "type": "string",
+      "file_uploadable": true,
+      "description": "File to upload"
+     }
+    },
+    "required": [
+     "attachment"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.attachment: unsupported-keyword-stripped"
+   ]
+  }
+ },
+ {
+  "case": "file_uploadable_top_level",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "file_uploadable",
+   "format"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "attachment": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "attachment"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "file_uploadable_top_level",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "file_uploadable",
+   "format"
+  ],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "attachment": {
+      "title": "Attachment",
+      "type": "string"
+     }
+    },
+    "required": [
+     "attachment"
+    ],
+    "title": "FILE_UPLOADABLE_TOP_LEVELParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "file_uploadable_nested",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "payload": {
+     "type": "object",
+     "properties": {
+      "file": {
+       "type": "string",
+       "file_uploadable": true
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "file_uploadable_nested",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "payload": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "properties": {
+       "file": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "file_uploadable": true
+       }
+      },
+      "required": [
+       "file"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "payload"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.payload.properties.file: optional-property-nullable",
+    "properties.payload: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "file_uploadable_nested",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "file_uploadable"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "payload": {
+     "properties": {
+      "file": {
+       "type": "STRING"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "type": "OBJECT"
+    }
+   },
+   "required": [
+    "payload"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "file_uploadable_nested",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "file_uploadable"
+  ],
+  "added_keywords": [
+   "additionalProperties",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+     }
+    },
+    "required": [
+     "payload"
+    ],
+    "title": "FILE_UPLOADABLE_NESTEDParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "enum_http_methods_with_HEAD",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "method": {
+     "type": "string",
+     "enum": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "PATCH",
+      "HEAD"
+     ]
+    }
+   },
+   "required": [
+    "method"
+   ]
+  }
+ },
+ {
+  "case": "enum_http_methods_with_HEAD",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "method": {
+      "type": "string",
+      "enum": [
+       "GET",
+       "POST",
+       "PUT",
+       "DELETE",
+       "PATCH",
+       "HEAD"
+      ]
+     }
+    },
+    "required": [
+     "method"
+    ],
+    "additionalProperties": false
+   },
+   "changes": []
+  }
+ },
+ {
+  "case": "enum_http_methods_with_HEAD",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "enum"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "method": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "method"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "enum_http_methods_with_HEAD",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "method": {
+      "enum": [
+       "GET",
+       "POST",
+       "PUT",
+       "DELETE",
+       "PATCH",
+       "HEAD"
+      ],
+      "title": "Method",
+      "type": "string"
+     }
+    },
+    "required": [
+     "method"
+    ],
+    "title": "ENUM_HTTP_METHODS_WITH_HEADParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "enum_untyped_with_HEAD",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "method": {
+     "enum": [
+      "GET",
+      "HEAD"
+     ]
+    }
+   },
+   "required": [
+    "method"
+   ]
+  }
+ },
+ {
+  "case": "enum_untyped_with_HEAD",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "method": {
+      "enum": [
+       "GET",
+       "HEAD"
+      ]
+     }
+    },
+    "required": [
+     "method"
+    ],
+    "additionalProperties": false
+   },
+   "changes": []
+  }
+ },
+ {
+  "case": "enum_untyped_with_HEAD",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "enum"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "method": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "method"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "enum_untyped_with_HEAD",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "enum"
+  ],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "method": {
+      "title": "Method"
+     }
+    },
+    "required": [
+     "method"
+    ],
+    "title": "ENUM_UNTYPED_WITH_HEADParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "enum_integer",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "level": {
+     "type": "integer",
+     "enum": [
+      1,
+      2,
+      3
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "enum_integer",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties",
+   "anyOf"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "level": {
+      "anyOf": [
+       {
+        "type": "integer",
+        "enum": [
+         1,
+         2,
+         3
+        ]
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "required": [
+     "level"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.level: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "enum_integer",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "enum"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "level": {
+     "type": "INTEGER"
+    }
+   },
+   "required": [
+    "level"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "enum_integer",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "level": {
+      "enum": [
+       1,
+       2,
+       3
+      ],
+      "title": "Level",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "level"
+    ],
+    "title": "ENUM_INTEGERParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "anyOf_nullable",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "note": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "anyOf_nullable",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "required": [
+     "note"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.note: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "anyOf_nullable",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "anyOf"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "note": {
+     "nullable": true,
+     "type": "STRING"
+    }
+   },
+   "required": [],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "anyOf_nullable",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Note"
+     }
+    },
+    "required": [
+     "note"
+    ],
+    "title": "ANYOF_NULLABLEParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "type_list_nullable",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "note": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "type_list_nullable",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "note": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "note"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.note: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "type_list_nullable",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "note": {
+     "nullable": true,
+     "type": "STRING"
+    }
+   },
+   "required": [],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "type_list_nullable",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "anyOf",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Note"
+     }
+    },
+    "required": [
+     "note"
+    ],
+    "title": "TYPE_LIST_NULLABLEParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "oneOf_objects",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "target": {
+     "oneOf": [
+      {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "string"
+        }
+       }
+      },
+      {
+       "type": "object",
+       "properties": {
+        "email": {
+         "type": "string"
+        }
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "oneOf_objects",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [
+   "oneOf"
+  ],
+  "added_keywords": [
+   "additionalProperties",
+   "anyOf"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "target": {
+      "anyOf": [
+       {
+        "type": "object",
+        "properties": {
+         "id": {
+          "type": [
+           "string",
+           "null"
+          ]
+         }
+        },
+        "required": [
+         "id"
+        ],
+        "additionalProperties": false
+       },
+       {
+        "type": "object",
+        "properties": {
+         "email": {
+          "type": [
+           "string",
+           "null"
+          ]
+         }
+        },
+        "required": [
+         "email"
+        ],
+        "additionalProperties": false
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "required": [
+     "target"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.target: one-of-converted",
+    "properties.target.anyOf[0].properties.id: optional-property-nullable",
+    "properties.target.anyOf[1].properties.email: optional-property-nullable",
+    "properties.target: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "oneOf_objects",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "oneOf"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "target": {
+     "any_of": [
+      {
+       "properties": {
+        "id": {
+         "type": "STRING"
+        }
+       },
+       "required": [
+        "id"
+       ],
+       "type": "OBJECT"
+      },
+      {
+       "properties": {
+        "email": {
+         "type": "STRING"
+        }
+       },
+       "required": [
+        "email"
+       ],
+       "type": "OBJECT"
+      }
+     ],
+     "type": "OBJECT"
+    }
+   },
+   "required": [
+    "target"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "oneOf_objects",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "oneOf"
+  ],
+  "added_keywords": [
+   "additionalProperties",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "target": {
+      "additionalProperties": true,
+      "title": "Target",
+      "type": "object"
+     }
+    },
+    "required": [
+     "target"
+    ],
+    "title": "ONEOF_OBJECTSParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "untyped_property",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "anything": {
+     "description": "free-form"
+    }
+   }
+  }
+ },
+ {
+  "case": "untyped_property",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "anything": {
+      "description": "free-form"
+     }
+    },
+    "required": [
+     "anything"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.anything: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "untyped_property",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "anything": {}
+   },
+   "required": [
+    "anything"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "untyped_property",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "anything": {
+      "title": "Anything"
+     }
+    },
+    "required": [
+     "anything"
+    ],
+    "title": "UNTYPED_PROPERTYParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "array_without_items",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "ids": {
+     "type": "array"
+    }
+   }
+  }
+ },
+ {
+  "case": "array_without_items",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "ids": {
+      "type": [
+       "array",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "ids"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.ids: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "array_without_items",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "ids": {
+     "type": "ARRAY"
+    }
+   },
+   "required": [
+    "ids"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "array_without_items",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "items",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "ids": {
+      "items": {},
+      "title": "Ids",
+      "type": "array"
+     }
+    },
+    "required": [
+     "ids"
+    ],
+    "title": "ARRAY_WITHOUT_ITEMSParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "free_form_object_additionalProperties",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "meta": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "free_form_object_additionalProperties",
+  "provider": "openai_responses_strict",
+  "status": "error",
+  "error_type": "ValueError",
+  "error": "strict-unsupported: properties.meta: StrictSchemaIncompatibility(path='properties.meta', keyword='additionalProperties', detail='object accepts arbitrary keys')",
+  "where": "<scratchpad>/repro_providers.py"
+ },
+ {
+  "case": "free_form_object_additionalProperties",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "additionalProperties"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "meta": {
+     "properties": {},
+     "type": "OBJECT"
+    }
+   },
+   "required": [
+    "meta"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "free_form_object_additionalProperties",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "meta": {
+      "additionalProperties": true,
+      "title": "Meta",
+      "type": "object"
+     }
+    },
+    "required": [
+     "meta"
+    ],
+    "title": "FREE_FORM_OBJECT_ADDITIONALPROPERTIESParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "ref_without_defs",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "cfg": {
+     "$ref": "#/$defs/Missing"
+    }
+   }
+  }
+ },
+ {
+  "case": "ref_without_defs",
+  "provider": "openai_responses_strict",
+  "status": "error",
+  "error_type": "ValueError",
+  "error": "strict-unsupported: properties.cfg: StrictSchemaIncompatibility(path='properties.cfg', keyword='$ref', detail='unresolved $ref \"#/$defs/Missing\"')",
+  "where": "<scratchpad>/repro_providers.py"
+ },
+ {
+  "case": "ref_without_defs",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "cfg": {
+     "type": "OBJECT"
+    }
+   },
+   "required": [
+    "cfg"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "ref_without_defs",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [
+   "additionalProperties",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "cfg": {
+      "additionalProperties": true,
+      "title": "Cfg",
+      "type": "object"
+     }
+    },
+    "required": [
+     "cfg"
+    ],
+    "title": "REF_WITHOUT_DEFSParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "ref_with_defs",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "cfg": {
+     "$ref": "#/$defs/Cfg"
+    }
+   },
+   "$defs": {
+    "Cfg": {
+     "type": "object",
+     "properties": {
+      "a": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "ref_with_defs",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties",
+   "anyOf"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "cfg": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/Cfg"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "$defs": {
+     "Cfg": {
+      "type": "object",
+      "properties": {
+       "a": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      },
+      "required": [
+       "a"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "cfg"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "$defs.Cfg.properties.a: optional-property-nullable",
+    "properties.cfg: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "ref_with_defs",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "cfg": {
+     "properties": {
+      "a": {
+       "type": "STRING"
+      }
+     },
+     "required": [
+      "a"
+     ],
+     "type": "OBJECT"
+    }
+   },
+   "required": [
+    "cfg"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "ref_with_defs",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [
+   "additionalProperties",
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "cfg": {
+      "additionalProperties": true,
+      "title": "Cfg",
+      "type": "object"
+     }
+    },
+    "required": [
+     "cfg"
+    ],
+    "title": "REF_WITH_DEFSParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "const_value",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "kind": {
+     "const": "issue"
+    }
+   }
+  }
+ },
+ {
+  "case": "const_value",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties",
+   "anyOf"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "kind": {
+      "anyOf": [
+       {
+        "const": "issue"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "required": [
+     "kind"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.kind: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "const_value",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "const"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "kind": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "kind"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "const_value",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "const"
+  ],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "kind": {
+      "title": "Kind"
+     }
+    },
+    "required": [
+     "kind"
+    ],
+    "title": "CONST_VALUEParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "title_default_format",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "limit": {
+     "type": "integer",
+     "title": "Limit",
+     "default": 10
+    },
+    "since": {
+     "type": "string",
+     "format": "date-time"
+    }
+   }
+  }
+ },
+ {
+  "case": "title_default_format",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [
+   "default"
+  ],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "limit": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "title": "Limit"
+     },
+     "since": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "format": "date-time"
+     }
+    },
+    "required": [
+     "limit",
+     "since"
+    ],
+    "additionalProperties": false
+   },
+   "changes": [
+    "properties.limit: unsupported-keyword-stripped",
+    "properties.limit: optional-property-nullable",
+    "properties.since: optional-property-nullable"
+   ]
+  }
+ },
+ {
+  "case": "title_default_format",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [
+   "default",
+   "format",
+   "title"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "limit": {
+     "type": "INTEGER"
+    },
+    "since": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "limit",
+    "since"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "title_default_format",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [
+   "default",
+   "format"
+  ],
+  "added_keywords": [],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "limit": {
+      "title": "Limit",
+      "type": "integer"
+     },
+     "since": {
+      "title": "Since",
+      "type": "string"
+     }
+    },
+    "required": [
+     "limit",
+     "since"
+    ],
+    "title": "TITLE_DEFAULT_FORMATParams",
+    "type": "object"
+   }
+  }
+ },
+ {
+  "case": "reserved_name_from",
+  "provider": "openai",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "from": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "from"
+   ]
+  }
+ },
+ {
+  "case": "reserved_name_from",
+  "provider": "openai_responses_strict",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "from": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "from"
+    ],
+    "additionalProperties": false
+   },
+   "changes": []
+  }
+ },
+ {
+  "case": "reserved_name_from",
+  "provider": "gemini_genai(composio_gemini)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "from_rs": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "from_rs"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "reserved_name_from",
+  "provider": "google_adk(composio_google_adk)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [
+   "title"
+  ],
+  "output": {
+   "parameters_json_schema": {
+    "properties": {
+     "from_rs": {
+      "title": "From Rs",
+      "type": "string"
+     }
+    },
+    "required": [
+     "from_rs"
+    ],
+    "title": "RESERVED_NAME_FROMParams",
+    "type": "object"
+   }
+  }
+ }
+]

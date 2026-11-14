@@ -1,0 +1,24 @@
+# Third-party source: referenced by pinned commit (see NOTICE), not vendored
+composio-upstream/
+
+# Local environments and tooling
+.venv*/
+.claude/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+.pytest_cache/
+.streamlit/secrets.toml
+
+# Test scratch and per-run artifacts
+tool-schema-doctor/tests/.wtmp/
+tool-schema-doctor/out/evidence/live/
+tool-schema-doctor/out/*.err
+tool-schema-doctor/out/evidence/run.log
+
+# Secrets: never commit
+.env
+.env.*
+*.pem
+groq.env

@@ -1,0 +1,340 @@
+[
+ {
+  "available_versions": [
+   "latest"
+  ],
+  "name": "Update Permission",
+  "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
+  "input_parameters": {
+   "properties": {
+    "enforceExpansiveAccess": {
+     "default": false,
+     "description": "Whether the request should enforce expansive access rules. This field is deprecated, it is recommended to use `permissionDetails` instead.",
+     "nullable": true,
+     "title": "Enforce Expansive Access",
+     "type": "boolean"
+    },
+    "fileId": {
+     "description": "The ID of the file or shared drive.",
+     "examples": [
+      "1234567890abcdefghijklmnopqrstuvwxyz"
+     ],
+     "title": "File Id",
+     "type": "string"
+    },
+    "permission": {
+     "additionalProperties": false,
+     "description": "The permission resource to update. Only 'role' and 'expirationTime' can be updated.",
+     "properties": {
+      "expirationTime": {
+       "default": null,
+       "description": "The time at which this permission will expire (RFC 3339 date-time).",
+       "format": "date-time",
+       "nullable": true,
+       "title": "Expiration Time",
+       "type": "string"
+      },
+      "role": {
+       "default": null,
+       "description": "The role granted by this permission.",
+       "examples": [
+        "owner",
+        "organizer",
+        "fileOrganizer",
+        "writer",
+        "commenter",
+        "reader"
+       ],
+       "nullable": true,
+       "title": "Role",
+       "type": "string"
+      }
+     },
+     "title": "Permission",
+     "type": "object"
+    },
+    "permissionId": {
+     "description": "The ID of the permission.",
+     "examples": [
+      "01234567890123456789"
+     ],
+     "title": "Permission Id",
+     "type": "string"
+    },
+    "removeExpiration": {
+     "default": false,
+     "description": "Whether to remove the expiration date.",
+     "nullable": true,
+     "title": "Remove Expiration",
+     "type": "boolean"
+    },
+    "supportsAllDrives": {
+     "default": false,
+     "description": "Whether the requesting application supports both My Drives and shared drives.",
+     "nullable": true,
+     "title": "Supports All Drives",
+     "type": "boolean"
+    },
+    "transferOwnership": {
+     "default": false,
+     "description": "Whether to transfer ownership to the specified user and downgrade the current owner to a writer. This parameter is required as an acknowledgement of the side effect when set to true.",
+     "nullable": true,
+     "title": "Transfer Ownership",
+     "type": "boolean"
+    },
+    "useDomainAdminAccess": {
+     "default": false,
+     "description": "Issue the request as a domain administrator; if set to true, then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs.",
+     "nullable": true,
+     "title": "Use Domain Admin Access",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "fileId",
+    "permissionId",
+    "permission"
+   ],
+   "title": "UpdatePermissionRequest",
+   "type": "object"
+  },
+  "output_parameters": {
+   "properties": {
+    "data": {
+     "additionalProperties": false,
+     "description": "Data from the action execution",
+     "properties": {
+      "deleted": {
+       "default": null,
+       "description": "Whether the permission has been deleted. This is always false for permissions that haven't been deleted.",
+       "nullable": true,
+       "title": "Deleted",
+       "type": "boolean"
+      },
+      "displayName": {
+       "default": null,
+       "description": "The display name of the user or group to which this permission refers.",
+       "nullable": true,
+       "title": "Display Name",
+       "type": "string"
+      },
+      "domain": {
+       "default": null,
+       "description": "The domain to which this permission refers.",
+       "nullable": true,
+       "title": "Domain",
+       "type": "string"
+      },
+      "emailAddress": {
+       "default": null,
+       "description": "The email address of the user or group to which this permission refers.",
+       "nullable": true,
+       "title": "Email Address",
+       "type": "string"
+      },
+      "expirationTime": {
+       "default": null,
+       "description": "The time at which this permission will expire (RFC 3339 date-time).",
+       "format": "date-time",
+       "nullable": true,
+       "title": "Expiration Time",
+       "type": "string"
+      },
+      "id": {
+       "description": "The ID of the permission.",
+       "title": "Id",
+       "type": "string"
+      },
+      "kind": {
+       "default": "drive#permission",
+       "description": "Identifies what kind of resource this is. Value: the fixed string 'drive#permission'.",
+       "title": "Kind",
+       "type": "string"
+      },
+      "pendingOwner": {
+       "default": null,
+       "description": "Whether the account is pending owner. Output only.",
+       "nullable": true,
+       "title": "Pending Owner",
+       "type": "boolean"
+      },
+      "permissionDetails": {
+       "default": null,
+       "description": "Details of whether the permissions on this shared drive item are inherited or directly on this item. This is an output-only field which is present only for shared drive items.",
+       "items": {
+        "additionalProperties": true,
+        "properties": {},
+        "type": "object"
+       },
+       "nullable": true,
+       "title": "Permission Details",
+       "type": "array"
+      },
+      "photoLink": {
+       "default": null,
+       "description": "A link to the user's profile photo, if available.",
+       "nullable": true,
+       "title": "Photo Link",
+       "type": "string"
+      },
+      "role": {
+       "description": "The role granted by this permission.",
+       "examples": [
+        "owner",
+        "organizer",
+        "fileOrganizer",
+        "writer",
+        "commenter",
+        "reader"
+       ],
+       "title": "Role",
+       "type": "string"
+      },
+      "type": {
+       "description": "The type of the grantee.",
+       "examples": [
+        "user",
+        "group",
+        "domain",
+        "anyone"
+       ],
+       "title": "Type",
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "type",
+      "role"
+     ],
+     "title": "Data",
+     "type": "object"
+    },
+    "error": {
+     "default": null,
+     "description": "Error if any occurred during the execution of the action",
+     "nullable": true,
+     "title": "Error",
+     "type": "string"
+    },
+    "successful": {
+     "description": "Whether or not the action execution was successful or not",
+     "title": "Successful",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "data",
+    "successful"
+   ],
+   "title": "UpdatePermissionResponseWrapper",
+   "type": "object"
+  },
+  "description": "Tool to update a permission with patch semantics. use when you need to modify an existing permission for a file or shared drive.",
+  "tags": [
+   "updateHint",
+   "openWorldHint",
+   "important",
+   "permission"
+  ]
+ },
+ {
+  "available_versions": [
+   "latest"
+  ],
+  "name": "List repositories starred by the authenticated user",
+  "slug": "GITHUB_ACTIVITY_LIST_REPO_S_STARRED_BY_AUTHENTICATED_USER",
+  "input_parameters": {
+   "description": "Request schema for `ListRepositoriesStarredByTheAuthenticatedUser`",
+   "properties": {
+    "direction": {
+     "default": "desc",
+     "description": "Sort direction: 'asc' (ascending) or 'desc' (descending).",
+     "enum": [
+      "asc",
+      "desc"
+     ],
+     "examples": [
+      "asc",
+      "desc"
+     ],
+     "title": "Direction",
+     "type": "string"
+    },
+    "page": {
+     "default": 1,
+     "description": "Page number of results (starts from 1).",
+     "examples": [
+      "1",
+      "2",
+      "5"
+     ],
+     "title": "Page",
+     "type": "integer"
+    },
+    "per_page": {
+     "default": 1,
+     "description": "Number of results per page (max 100).",
+     "examples": [
+      "30",
+      "50",
+      "100"
+     ],
+     "title": "Per Page",
+     "type": "integer"
+    },
+    "sort": {
+     "default": "created",
+     "description": "Sorts starred repositories by 'created' (date starred) or 'updated' (date last pushed).",
+     "enum": [
+      "created",
+      "updated"
+     ],
+     "examples": [
+      "created",
+      "updated"
+     ],
+     "title": "Sort",
+     "type": "string"
+    }
+   },
+   "title": "ListRepositoriesStarredByTheAuthenticatedUserRequest",
+   "type": "object"
+  },
+  "output_parameters": {
+   "properties": {
+    "data": {
+     "additionalProperties": true,
+     "title": "Data",
+     "type": "object"
+    },
+    "error": {
+     "default": null,
+     "description": "Error if any occurred during the execution of the action",
+     "nullable": true,
+     "title": "Error",
+     "type": "string"
+    },
+    "successful": {
+     "description": "Whether or not the action execution was successful or not",
+     "title": "Successful",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "data",
+    "successful"
+   ],
+   "title": "ListRepositoriesStarredByTheAuthenticatedUserResponseWrapper",
+   "type": "object"
+  },
+  "description": "Deprecated: lists repositories starred by the authenticated user, including star creation timestamps; use 'list repositories starred by the authenticated user' instead.",
+  "tags": [
+   "readOnlyHint",
+   "idempotentHint",
+   "openWorldHint",
+   "Stars",
+   "mcpIgnore"
+  ]
+ }
+]

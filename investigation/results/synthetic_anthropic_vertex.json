@@ -1,0 +1,738 @@
+[
+ {
+  "case": "baseline_simple",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "owner": {
+     "type": "string",
+     "description": "Repo owner"
+    }
+   },
+   "required": [
+    "owner"
+   ]
+  }
+ },
+ {
+  "case": "baseline_simple",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "owner": {
+     "description": "Repo owner",
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "owner"
+   ],
+   "property_ordering": [
+    "owner"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "examples_top_level",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "q": {
+     "type": "string",
+     "examples": [
+      "foo",
+      "bar"
+     ]
+    }
+   },
+   "required": [
+    "q"
+   ]
+  }
+ },
+ {
+  "case": "examples_top_level",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [
+   "examples"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "q": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "q"
+   ],
+   "property_ordering": [
+    "q"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "examples_nested_object",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "filter": {
+     "type": "object",
+     "properties": {
+      "q": {
+       "type": "string",
+       "examples": [
+        "foo"
+       ]
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "examples_nested_object",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[filter].properties[q]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "examples_in_array_items",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "tags": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "examples": [
+       "x"
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "examples_in_array_items",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Failed to parse items field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[tags].items\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "file_uploadable_top_level",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "attachment": {
+     "type": "string",
+     "format": "path",
+     "file_uploadable": true,
+     "description": "File to upload"
+    }
+   },
+   "required": [
+    "attachment"
+   ]
+  }
+ },
+ {
+  "case": "file_uploadable_top_level",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"fileUploadable\" at \"Schema.properties[attachment]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "file_uploadable_nested",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "payload": {
+     "type": "object",
+     "properties": {
+      "file": {
+       "type": "string",
+       "file_uploadable": true
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "file_uploadable_nested",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"fileUploadable\" at \"Schema.properties[payload].properties[file]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "enum_http_methods_with_HEAD",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "method": {
+     "type": "string",
+     "enum": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "PATCH",
+      "HEAD"
+     ]
+    }
+   },
+   "required": [
+    "method"
+   ]
+  }
+ },
+ {
+  "case": "enum_http_methods_with_HEAD",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "method": {
+     "enum": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "PATCH",
+      "HEAD"
+     ],
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "method"
+   ],
+   "property_ordering": [
+    "method"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "enum_untyped_with_HEAD",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "method": {
+     "enum": [
+      "GET",
+      "HEAD"
+     ]
+    }
+   },
+   "required": [
+    "method"
+   ]
+  }
+ },
+ {
+  "case": "enum_untyped_with_HEAD",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "method": {
+     "enum": [
+      "GET",
+      "HEAD"
+     ]
+    }
+   },
+   "required": [
+    "method"
+   ],
+   "property_ordering": [
+    "method"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "enum_integer",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "level": {
+     "type": "integer",
+     "enum": [
+      1,
+      2,
+      3
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "enum_integer",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Failed to parse enum field: expected string or bytes-like object, got 'int'..",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "anyOf_nullable",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "note": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "anyOf_nullable",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Failed to parse anyOf field: Failed to parse type field: Invalid enum value NULL for enum type google.cloud.aiplatform.v1beta1.Type at Schema.properties[note].anyOf[1].type...",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "type_list_nullable",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "note": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "type_list_nullable",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "AttributeError",
+  "error": "'list' object has no attribute 'upper'",
+  "where": "\\vertexai\\generative_models\\_generative_models.py"
+ },
+ {
+  "case": "oneOf_objects",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "target": {
+     "oneOf": [
+      {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "string"
+        }
+       }
+      },
+      {
+       "type": "object",
+       "properties": {
+        "email": {
+         "type": "string"
+        }
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "case": "oneOf_objects",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"oneOf\" at \"Schema.properties[target]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "untyped_property",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "anything": {
+     "description": "free-form"
+    }
+   }
+  }
+ },
+ {
+  "case": "untyped_property",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "anything": {
+     "description": "free-form"
+    }
+   },
+   "property_ordering": [
+    "anything"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "array_without_items",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "ids": {
+     "type": "array"
+    }
+   }
+  }
+ },
+ {
+  "case": "array_without_items",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "ids": {
+     "type": "ARRAY"
+    }
+   },
+   "property_ordering": [
+    "ids"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "free_form_object_additionalProperties",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "meta": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "free_form_object_additionalProperties",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [
+   "additionalProperties"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "meta": {
+     "additional_properties": {
+      "type": "STRING"
+     },
+     "type": "OBJECT"
+    }
+   },
+   "property_ordering": [
+    "meta"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "ref_without_defs",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [
+   "additionalProperties"
+  ],
+  "output": {
+   "type": "object",
+   "properties": {
+    "cfg": {
+     "type": "object",
+     "additionalProperties": true,
+     "description": "Schema shape unresolved at the source \u2014 validate loosely. See https://github.com/ComposioHQ/composio/issues/3307."
+    }
+   }
+  }
+ },
+ {
+  "case": "ref_without_defs",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "cfg": {
+     "description": "Schema shape unresolved at the source \u2014 validate loosely. See https://github.com/ComposioHQ/composio/issues/3307.",
+     "additional_properties": {},
+     "type": "OBJECT"
+    }
+   },
+   "property_ordering": [
+    "cfg"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "ref_with_defs",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "cfg": {
+     "type": "object",
+     "properties": {
+      "a": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "case": "ref_with_defs",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [
+   "$ref"
+  ],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "cfg": {
+     "properties": {
+      "a": {
+       "type": "STRING"
+      }
+     },
+     "property_ordering": [
+      "a"
+     ],
+     "type": "OBJECT"
+    }
+   },
+   "property_ordering": [
+    "cfg"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "const_value",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "kind": {
+     "const": "issue"
+    }
+   }
+  }
+ },
+ {
+  "case": "const_value",
+  "provider": "google_vertex(composio_google)",
+  "status": "error",
+  "error_type": "ParseError",
+  "error": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"const\" at \"Schema.properties[kind]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".",
+  "where": "\\google\\protobuf\\json_format.py"
+ },
+ {
+  "case": "title_default_format",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "limit": {
+     "type": "integer",
+     "title": "Limit",
+     "default": 10
+    },
+    "since": {
+     "type": "string",
+     "format": "date-time"
+    }
+   }
+  }
+ },
+ {
+  "case": "title_default_format",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "limit": {
+     "default": 10.0,
+     "title": "Limit",
+     "type": "INTEGER"
+    },
+    "since": {
+     "type": "STRING",
+     "format": "date-time"
+    }
+   },
+   "property_ordering": [
+    "limit",
+    "since"
+   ],
+   "type": "OBJECT"
+  }
+ },
+ {
+  "case": "reserved_name_from",
+  "provider": "anthropic",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "type": "object",
+   "properties": {
+    "from_rs": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "from_rs"
+   ]
+  }
+ },
+ {
+  "case": "reserved_name_from",
+  "provider": "google_vertex(composio_google)",
+  "status": "ok",
+  "dropped_keywords": [],
+  "added_keywords": [],
+  "output": {
+   "properties": {
+    "from": {
+     "type": "STRING"
+    }
+   },
+   "required": [
+    "from"
+   ],
+   "property_ordering": [
+    "from"
+   ],
+   "type": "OBJECT"
+  }
+ }
+]
