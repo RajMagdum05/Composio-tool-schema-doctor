@@ -4,6 +4,7 @@ Uses Streamlit's own AppTest runner to execute streamlit_app.py against the save
 evidence in out/. Skipped when Streamlit or the generated evidence is missing.
 """
 
+import re
 from pathlib import Path
 
 import pytest
@@ -35,10 +36,14 @@ def test_dashboard_renders_without_exceptions():
 def test_fix_list_has_five_findings_and_all_pinned_tests_pass():
     at = _run()
     text = "\n".join(m.value for m in at.markdown)
-    assert text.count("**Fix:**") == 5
-    pinned = [m.value for m in at.markdown if m.value.startswith("**Pinned by tests:**")]
+    assert text.count("<div class='lbl'>Fix</div>") == 5
+    assert text.count("<div class='lbl'>Why it matters</div>") == 5
+    # each finding lists the tests that pin it: "✓ `test_x` · ✓ `test_y`" (✗ failed, – skipped, ? missing)
+    pinned = [m.value for m in at.markdown if re.match(r"^[✓✗–?] `test_", m.value)]
     assert len(pinned) == 5
-    assert all("✅" in p and "❌" not in p and "❔" not in p for p in pinned)
+    # every listed test has a ✓ in front of it, none is failed, skipped or missing
+    assert all(p.count("✓ `test_") == p.count("`test_") for p in pinned), pinned
+    assert all(not re.search(r"[✗–?] `test_", p) for p in pinned), pinned
 
 
 def test_fixed_upstream_finding_is_labelled_and_listed_last():
@@ -50,10 +55,10 @@ def test_fixed_upstream_finding_is_labelled_and_listed_last():
     at = _run()
     titles = [m.value for m in at.markdown if m.value.startswith("#### ")]
     assert len(titles) == 5
-    assert "fixed upstream" in titles[-1] and titles[-1].startswith("#### 5.")
-    assert all("fixed upstream" not in t for t in titles[:-1])
-    assert any("FIXED UPSTREAM" in m.value for m in at.markdown)
-    assert any("pull/4751" in s.value for s in at.success)
+    assert "fixed upstream" in titles[-1].lower() and titles[-1].startswith("#### 5.")
+    assert all("fixed upstream" not in t.lower() for t in titles[:-1])
+    assert any("d-fixed" in m.value and "Fixed upstream" in m.value for m in at.markdown)
+    assert any("class='note'" in m.value and "pull/4751" in m.value for m in at.markdown)
 
 
 def test_dashboard_works_without_the_composio_checkout(wtmp):

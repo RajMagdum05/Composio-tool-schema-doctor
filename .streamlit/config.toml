@@ -1,0 +1,25 @@
+# Visual theme for the dashboard. Streamlit reads this from the folder it is launched in
+# (the repository root), locally and on Streamlit Community Cloud.
+
+[client]
+toolbarMode = "viewer"          # hides the Deploy button and developer menu for visitors
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#0071e3"
+font = "sans serif"
+baseRadius = "medium"
+
+[theme.light]
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f5f7"
+textColor = "#1d1d1f"
+borderColor = "#d2d2d7"
+
+[theme.dark]
+backgroundColor = "#000000"
+secondaryBackgroundColor = "#1c1c1e"
+textColor = "#f5f5f7"
+borderColor = "#38383a"
