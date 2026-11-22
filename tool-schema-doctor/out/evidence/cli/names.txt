@@ -1,16 +1,16 @@
 {
   "input": "composio-upstream/docs/public/data/toolkits.json",
   "source": "catalog",
-  "tools": 84004,
+  "tools": 96002,
   "summary": {
-    "total": 1287,
+    "total": 2334,
     "by_rule": {
-      "description-repeats-name": 678,
-      "duplicate-display-name-in-toolkit": 609
+      "description-repeats-name": 808,
+      "duplicate-display-name-in-toolkit": 1526
     },
     "by_severity": {
-      "warning": 678,
-      "info": 609
+      "warning": 808,
+      "info": 1526
     }
   },
   "skipped_rules": {},
@@ -803,6 +803,166 @@
       "toolkit": "bexio",
       "field_path": null,
       "evidence": "description='Update manual entry.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_BRANDS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_CARTS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_CATEGORIES_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_CHANNELS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_LOCATIONS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_ORDERS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_PRODUCTS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_STORES_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_CREATE_VARIANTS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Create multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_DELETE_COUPONS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Delete All Coupons.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_GET_SETTINGS_INVENTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Get Inventory Settings'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_UPDATE_CHANNELS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Update multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_UPDATE_ORDERS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Update multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_UPDATE_PRODUCTS_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Update multiple metafields.'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_UPDATE_SETTINGS_INVENTORY",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Update inventory settings'",
+      "remediation": "describe inputs, effect, and when to use it"
+    },
+    {
+      "rule_id": "description-repeats-name",
+      "severity": "warning",
+      "slug": "BIGCOMMERCE_UPDATE_STORE_METAFIELDS",
+      "message": "description just repeats the name/slug without explaining what the tool does",
+      "toolkit": "bigcommerce",
+      "field_path": null,
+      "evidence": "description='Update multiple metafields.'",
       "remediation": "describe inputs, effect, and when to use it"
     },
     {
@@ -1853,166 +2013,6 @@
       "toolkit": "linode",
       "field_path": null,
       "evidence": "description='Create a managed service.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_NAT_GATEWAY",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a NAT Gateway.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_NODE",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a node.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_NODE_POOL",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a node pool.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_PLACEMENT_GROUP",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a placement group.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_POSTGRESQL_CONNECTION_POOL",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a PostgreSQL connection pool.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_REPLY",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a reply.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_RESOURCE_LOCK",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a resource lock.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_RULE_SET",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a Rule Set.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_SNAPSHOT",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a snapshot.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_STACKSCRIPT",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a StackScript.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_STREAM",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a stream.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_SUPPORT_TICKET_ATTACHMENT",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a support ticket attachment.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_TAG",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a tag.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_VPC",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a VPC.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_CREATE_A_VPC_SUBNET",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Create a VPC subnet.'",
-      "remediation": "describe inputs, effect, and when to use it"
-    },
-    {
-      "rule_id": "description-repeats-name",
-      "severity": "warning",
-      "slug": "LINODE_ENABLE_A_MANAGED_SERVICE_MONITOR",
-      "message": "description just repeats the name/slug without explaining what the tool does",
-      "toolkit": "linode",
-      "field_path": null,
-      "evidence": "description='Enable a managed service monitor.'",
       "remediation": "describe inputs, effect, and when to use it"
     }
   ],

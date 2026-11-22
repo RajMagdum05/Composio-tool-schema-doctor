@@ -3,77 +3,9 @@
   "tools": 930,
   "summary": {
     "google_vertex": {
-      "transformed": 911,
-      "ok": 13,
-      "error": 6
+      "transformed": 917,
+      "ok": 13
     }
   },
-  "results": [
-    {
-      "slug": "GOOGLEDRIVE_FILES_MODIFY_LABELS",
-      "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[label_modifications].items.properties[field_modifications].items.properties[set_date_values]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".....",
-      "schema_path": "/properties/label_modifications/items/properties/field_modifications/items/properties/set_date_values/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
-      "added_keywords": []
-    },
-    {
-      "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
-      "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[permission].properties[role]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/permission/properties/role/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
-      "added_keywords": []
-    },
-    {
-      "slug": "GOOGLEDRIVE_UPLOAD_FILE",
-      "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"fileUploadable\" at \"Schema.properties[file_to_upload]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".",
-      "schema_path": "/properties/file_to_upload/file_uploadable",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
-      "added_keywords": []
-    },
-    {
-      "slug": "GOOGLE_ANALYTICS_CREATE_EXPANDED_DATA_SET",
-      "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[expandedDataSet].properties[dimensionNames]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/expandedDataSet/properties/dimensionNames/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
-      "added_keywords": []
-    },
-    {
-      "slug": "GOOGLE_CLASSROOM_COURSE_WORK_PATCH",
-      "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[dueDate].properties[day]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/dueDate/properties/day/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
-      "added_keywords": []
-    },
-    {
-      "slug": "GOOGLE_MAPS_MAPS_EMBED_API",
-      "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[directions_params].properties[avoid]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/directions_params/properties/avoid/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
-      "added_keywords": []
-    }
-  ]
+  "results": []
 }

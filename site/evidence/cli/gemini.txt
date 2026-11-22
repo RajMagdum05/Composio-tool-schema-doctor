@@ -15,7 +15,7 @@
       "error_type": "ValueError",
       "message": "Failed to parse the parameter permission: composio.utils.schema_converter.Permission of function GOOGLEDRIVE_UPDATE_PERMISSION for automatic function calling.Automatic function calling works best with simpler function signature schema, consider manually parsing your function declaration for function GOOGLEDRIVE_UPDATE_PERMISSION.",
       "schema_path": "/properties/permission",
-      "where": "\\google\\genai\\_automatic_function_calling_util.py",
+      "where": "/google/genai/_automatic_function_calling_util.py",
       "dropped_keywords": [],
       "added_keywords": []
     },

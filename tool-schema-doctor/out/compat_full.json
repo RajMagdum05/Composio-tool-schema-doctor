@@ -13,9 +13,8 @@
       "ok": 930
     },
     "google_vertex": {
-      "transformed": 911,
-      "ok": 13,
-      "error": 6
+      "transformed": 917,
+      "ok": 13
     },
     "gemini": {
       "transformed": 929,
@@ -10327,7 +10326,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.emails.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -10353,7 +10352,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.assignees.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -10425,7 +10424,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -10532,7 +10531,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -10573,7 +10572,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.account_urls.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -10614,7 +10613,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_usernames.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -10685,7 +10684,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11012,7 +11011,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11023,7 +11022,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.include_claim_keys.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11081,7 +11080,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.assignees.items: properties (free-form object accepts arbitrary keys); properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11122,7 +11121,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.custom_properties: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11133,7 +11132,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11144,7 +11143,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.events.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11171,7 +11170,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.actions.items: additionalProperties (object accepts arbitrary keys); properties.output__annotations.items: additionalProperties (object accepts arbitrary keys); properties.output__images.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11243,7 +11242,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.parents.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11285,7 +11284,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.permissions.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11296,7 +11295,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.required_contexts.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11399,7 +11398,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.files.additionalProperties: additionalProperties (object accepts arbitrary keys); properties.files: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11657,7 +11656,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.client_payload: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11716,7 +11715,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.bypass_actors.items: additionalProperties (object accepts arbitrary keys); properties.conditions__ref__name__exclude.items: properties (free-form object accepts arbitrary keys); properties.conditions__ref__name__include.items: properties (free-form object accepts arbitrary keys); properties.rules.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11758,7 +11757,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.events.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11802,7 +11801,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.repositories.items: properties (free-form object accepts arbitrary keys); properties.repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11813,7 +11812,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.manifests.additionalProperties: additionalProperties (object accepts arbitrary keys); properties.manifests: additionalProperties (object accepts arbitrary keys); properties.metadata: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11854,7 +11853,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.maintainers.items: properties (free-form object accepts arbitrary keys); properties.repo_names.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11880,7 +11879,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.tree.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11906,7 +11905,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.inputs: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11947,7 +11946,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11958,7 +11957,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.reviewers.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11984,7 +11983,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -11995,7 +11994,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.allowed_values.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -12021,7 +12020,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -12032,7 +12031,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.properties.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -12043,7 +12042,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.properties.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -12189,7 +12188,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -12230,7 +12229,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.include_claim_keys.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -12344,7 +12343,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.emails.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13294,7 +13293,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.account_urls.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13516,7 +13515,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13542,7 +13541,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13598,7 +13597,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13793,7 +13792,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13819,7 +13818,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -13906,7 +13905,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -15545,7 +15544,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -15556,7 +15555,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -15627,7 +15626,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -15698,7 +15697,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -15846,7 +15845,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -15872,7 +15871,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -16036,7 +16035,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -16183,7 +16182,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -16284,7 +16283,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.files.additionalProperties: additionalProperties (object accepts arbitrary keys); properties.files: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -16311,7 +16310,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -16337,7 +16336,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -16348,7 +16347,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.assignees.items: properties (free-form object accepts arbitrary keys); properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -17323,7 +17322,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.affects.items: properties (free-form object accepts arbitrary keys); properties.cwes.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -17864,7 +17863,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.owner.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -17875,7 +17874,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.owner.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -19588,7 +19587,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_usernames.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -19599,7 +19598,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.properties.items: additionalProperties (object accepts arbitrary keys); properties.repository_names.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -19732,7 +19731,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -19803,7 +19802,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.cwe_ids.items: properties (free-form object accepts arbitrary keys); properties.vulnerabilities.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20044,7 +20043,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.assignees.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20235,7 +20234,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20336,7 +20335,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.reviewers.items: properties (free-form object accepts arbitrary keys); properties.team_reviewers.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20437,7 +20436,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_usernames.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20510,7 +20509,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.names.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20521,7 +20520,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20532,7 +20531,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20575,7 +20574,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.custom_properties: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20793,7 +20792,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.reviewers.items: properties (free-form object accepts arbitrary keys); properties.team_reviewers.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20984,7 +20983,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.environment_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -20995,7 +20994,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.pat_request_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21006,7 +21005,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21200,7 +21199,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.affects.items: properties (free-form object accepts arbitrary keys); properties.cwes.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21384,7 +21383,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21395,7 +21394,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.patterns_allowed.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21406,7 +21405,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21432,7 +21431,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.patterns_allowed.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21443,7 +21442,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21454,7 +21453,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21465,7 +21464,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21476,7 +21475,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.contexts.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21652,7 +21651,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.team_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21829,7 +21828,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.assignees.items: properties (free-form object accepts arbitrary keys); properties.labels.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21872,7 +21871,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.selected_repository_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21883,7 +21882,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.events.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21894,7 +21893,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.actions.items: additionalProperties (object accepts arbitrary keys); properties.output__annotations.items: additionalProperties (object accepts arbitrary keys); properties.output__images.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21905,7 +21904,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.recent_folders.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21932,7 +21931,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.languages.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -21958,7 +21957,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.permissions.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22014,7 +22013,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.files.additionalProperties: additionalProperties (object accepts arbitrary keys); properties.files: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22201,7 +22200,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.bypass_actors.items: additionalProperties (object accepts arbitrary keys); properties.conditions__ref__name__exclude.items: properties (free-form object accepts arbitrary keys); properties.conditions__ref__name__include.items: properties (free-form object accepts arbitrary keys); properties.rules.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22227,7 +22226,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.add_events.items: properties (free-form object accepts arbitrary keys); properties.events.items: properties (free-form object accepts arbitrary keys); properties.remove_events.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22317,7 +22316,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.required__pull__request__reviews__bypass__pull__request__allowances__apps.items: properties (free-form object accepts arbitrary keys); properties.required__pull__request__reviews__bypass__pull__request__allowances__teams.items: properties (free-form object accepts arbitrary keys); properties.required__pull__request__reviews__bypass__pull__request__allowances__users.items: properties (free-form object accepts arbitrary keys); properties.required__pull__request__reviews__dismissal__restrictions__apps.items: properties (free-form object accepts arbitrary keys); properties.required__pull__request__reviews__dismissal__restrictions__teams.items: properties (free-form object accepts arbitrary keys); properties.required__pull__request__reviews__dismissal__restrictions__users.items: properties (free-form object accepts arbitrary keys); properties.required__status__checks__checks.items: additionalProperties (object accepts arbitrary keys); properties.required__status__checks__contexts.items: properties (free-form object accepts arbitrary keys); properties.restrictions__apps.items: properties (free-form object accepts arbitrary keys); properties.restrictions__teams.items: properties (free-form object accepts arbitrary keys); properties.restrictions__users.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22359,7 +22358,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.bypass__pull__request__allowances__apps.items: properties (free-form object accepts arbitrary keys); properties.bypass__pull__request__allowances__teams.items: properties (free-form object accepts arbitrary keys); properties.bypass__pull__request__allowances__users.items: properties (free-form object accepts arbitrary keys); properties.dismissal__restrictions__apps.items: properties (free-form object accepts arbitrary keys); properties.dismissal__restrictions__teams.items: properties (free-form object accepts arbitrary keys); properties.dismissal__restrictions__users.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22370,7 +22369,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.auto_trigger_checks.items: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22381,7 +22380,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.pat_ids.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22392,7 +22391,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.checks.items: additionalProperties (object accepts arbitrary keys); properties.contexts.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22448,7 +22447,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: <root>: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22615,7 +22614,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.parents.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -22801,7 +22800,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.label_modifications.items.properties.field_modifications.items.properties.set_date_values.items: properties (free-form object accepts arbitrary keys); properties.label_modifications.items.properties.field_modifications.items.properties.set_integer_values.items: properties (free-form object accepts arbitrary keys); properties.label_modifications.items.properties.field_modifications.items.properties.set_selection_values.items: properties (free-form object accepts arbitrary keys); properties.label_modifications.items.properties.field_modifications.items.properties.set_text_values.items: properties (free-form object accepts arbitrary keys); properties.label_modifications.items.properties.field_modifications.items.properties.set_user_values.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23179,7 +23178,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.params: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23326,7 +23325,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.params.properties.additional_properties: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23555,7 +23554,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.expandedDataSet.properties.dimensionNames.items: properties (free-form object accepts arbitrary keys); properties.expandedDataSet.properties.metricNames.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23630,7 +23629,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.individualStudentsOptions.properties.studentIds.items: properties (free-form object accepts arbitrary keys); properties.materials.items.properties.driveFile: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.form: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.link: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.youtubeVideo: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23688,7 +23687,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.individualStudentsOptions.properties.studentIds.items: properties (free-form object accepts arbitrary keys); properties.materials.items.properties.driveFile: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.form: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.link: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.youtubeVideo: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23746,7 +23745,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.courseStates.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23915,7 +23914,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.assignment: additionalProperties (object accepts arbitrary keys); properties.materials.items: additionalProperties (object accepts arbitrary keys); properties.multipleChoiceQuestion.properties.choices.items: properties (free-form object accepts arbitrary keys); properties.shortAnswerQuestion.properties.grading: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23956,7 +23955,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.courseWorkStates.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -23967,7 +23966,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.individualStudentsOptions.properties.studentIds.items: properties (free-form object accepts arbitrary keys); properties.materials.items.properties.driveFile: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.form: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.link: additionalProperties (object accepts arbitrary keys); properties.materials.items.properties.youtubeVideo: additionalProperties (object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -24026,7 +24025,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.states.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -24084,7 +24083,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.extra_computations.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -24144,7 +24143,7 @@
       "error_type": "ValueError",
       "message": "strict-unsupported: properties.excludedTypes.items: properties (free-form object accepts arbitrary keys); properties.includedTypes.items: properties (free-form object accepts arbitrary keys)",
       "schema_path": null,
-      "where": "R:\\Internship_Outreach_prototype\\Composio\\tool-schema-doctor\\src\\tool_schema_doctor\\providers.py",
+      "where": "/home/runner/work/Composio-tool-schema-doctor/Composio-tool-schema-doctor/tool-schema-doctor/src/tool_schema_doctor/providers.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
@@ -45300,12 +45299,14 @@
     {
       "slug": "GOOGLEDRIVE_FILES_MODIFY_LABELS",
       "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Failed to parse items field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[label_modifications].items.properties[field_modifications].items.properties[set_date_values]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".....",
-      "schema_path": "/properties/label_modifications/items/properties/field_modifications/items/properties/set_date_values/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "examples"
+      ],
       "added_keywords": []
     },
     {
@@ -45698,12 +45699,15 @@
     {
       "slug": "GOOGLEDRIVE_UPDATE_PERMISSION",
       "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[permission].properties[role]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/permission/properties/role/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "additionalProperties",
+        "examples"
+      ],
       "added_keywords": []
     },
     {
@@ -45722,12 +45726,16 @@
     {
       "slug": "GOOGLEDRIVE_UPLOAD_FILE",
       "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"fileUploadable\" at \"Schema.properties[file_to_upload]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\".",
-      "schema_path": "/properties/file_to_upload/file_uploadable",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "additionalProperties",
+        "examples",
+        "file_uploadable"
+      ],
       "added_keywords": []
     },
     {
@@ -45929,12 +45937,15 @@
     {
       "slug": "GOOGLE_ANALYTICS_CREATE_EXPANDED_DATA_SET",
       "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[expandedDataSet].properties[dimensionNames]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/expandedDataSet/properties/dimensionNames/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "additionalProperties",
+        "examples"
+      ],
       "added_keywords": []
     },
     {
@@ -46333,12 +46344,15 @@
     {
       "slug": "GOOGLE_CLASSROOM_COURSE_WORK_PATCH",
       "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[dueDate].properties[day]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/dueDate/properties/day/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "additionalProperties",
+        "examples"
+      ],
       "added_keywords": []
     },
     {
@@ -46435,12 +46449,15 @@
     {
       "slug": "GOOGLE_MAPS_MAPS_EMBED_API",
       "provider": "google_vertex",
-      "status": "error",
-      "error_type": "ParseError",
-      "message": "Failed to parse properties field: Failed to parse properties field: Message type \"google.cloud.aiplatform.v1beta1.Schema\" has no field named \"examples\" at \"Schema.properties[directions_params].properties[avoid]\".\n Available Fields(except extensions): \"['type', 'format', 'title', 'description', 'nullable', 'default', 'items', 'minItems', 'maxItems', 'enum', 'properties', 'propertyOrdering', 'required', 'minProperties', 'maxProperties', 'minimum', 'maximum', 'minLength', 'maxLength', 'pattern', 'example', 'anyOf', 'additionalProperties', 'ref', 'defs']\"..",
-      "schema_path": "/properties/directions_params/properties/avoid/examples",
-      "where": "\\google\\protobuf\\json_format.py",
-      "dropped_keywords": [],
+      "status": "transformed",
+      "error_type": null,
+      "message": null,
+      "schema_path": null,
+      "where": null,
+      "dropped_keywords": [
+        "additionalProperties",
+        "examples"
+      ],
       "added_keywords": []
     },
     {
@@ -59132,7 +59149,7 @@
       "error_type": "ValueError",
       "message": "Failed to parse the parameter permission: composio.utils.schema_converter.Permission of function GOOGLEDRIVE_UPDATE_PERMISSION for automatic function calling.Automatic function calling works best with simpler function signature schema, consider manually parsing your function declaration for function GOOGLEDRIVE_UPDATE_PERMISSION.",
       "schema_path": "/properties/permission",
-      "where": "\\google\\genai\\_automatic_function_calling_util.py",
+      "where": "/google/genai/_automatic_function_calling_util.py",
       "dropped_keywords": [],
       "added_keywords": []
     },
