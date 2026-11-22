@@ -1,0 +1,123 @@
+name: Refresh Composio snapshot
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: composio-snapshot-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out this project
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Check out Composio next
+        uses: actions/checkout@v4
+        with:
+          repository: ComposioHQ/composio
+          ref: next
+          path: composio-upstream
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check whether the upstream snapshot changed
+        id: change
+        env:
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          evidence_path = Path("tool-schema-doctor/out/evidence/evidence.json")
+          previous = ""
+          if evidence_path.exists():
+              evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+              previous = evidence.get("provenance", {}).get("upstream_commit", "")
+          current = subprocess.check_output(
+              ["git", "-C", "composio-upstream", "rev-parse", "HEAD"], text=True
+          ).strip()
+          changed = os.environ["FORCE_REFRESH"] == "true" or previous != current
+          print(f"upstream_sha={current}")
+          print(f"changed={str(changed).lower()}")
+          print(f"previous_sha={previous}")
+          PY
+
+      - name: Stop when the source has not changed
+        if: steps.change.outputs.changed != 'true'
+        run: echo "Composio next has no new commit since the last analyzed snapshot."
+
+      - name: Install the checker and provider adapters
+        if: steps.change.outputs.changed == 'true'
+        run: python -m pip install -e "tool-schema-doctor[all,dev,dashboard]"
+
+      - name: Regenerate analysis and regression-test evidence
+        if: steps.change.outputs.changed == 'true'
+        run: python tool-schema-doctor/make_evidence.py
+
+      - name: Require successful checks before publishing
+        if: steps.change.outputs.changed == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          evidence = json.loads(Path("tool-schema-doctor/out/evidence/evidence.json").read_text(encoding="utf-8"))
+          failed = [item["command"] for item in evidence["commands"].values() if item["exit_code"] != 0]
+          tests = evidence["tests"]
+          if tests.get("exit_code") != 0 or tests.get("passed") != tests.get("tests"):
+              failed.append(f"pytest: {tests.get('last_line', 'test suite failed')}")
+          if failed:
+              raise SystemExit("Refresh not published; checks failed:\n- " + "\n- ".join(failed))
+          print(f"All {tests.get('tests')} tests passed; all recorded CLI commands succeeded.")
+          PY
+
+      - name: Build the static dashboard
+        if: steps.change.outputs.changed == 'true'
+        run: python tool-schema-doctor/build_static.py
+
+      - name: Commit refreshed results
+        if: steps.change.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tool-schema-doctor/out site
+          if git diff --cached --quiet; then
+            echo "Generated files are unchanged."
+          else
+            git commit -m "Refresh Composio analysis at ${{ steps.change.outputs.upstream_sha }}"
+            git push origin HEAD:main
+          fi
+
+      - name: Publish to Netlify
+        if: steps.change.outputs.changed == 'true'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [[ -z "$NETLIFY_AUTH_TOKEN" ]]; then
+            echo "::error::Add the NETLIFY_AUTH_TOKEN repository Actions secret to publish refreshed snapshots."
+            exit 1
+          fi
+          npx --yes netlify-cli@27.19.0 deploy \
+            --prod \
+            --dir site \
+            --site dec94582-ac3e-43da-a940-42fb48716001 \
+            --auth "$NETLIFY_AUTH_TOKEN" \
+            --message "Refresh from Composio ${{ steps.change.outputs.upstream_sha }}"

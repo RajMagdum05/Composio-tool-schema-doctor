@@ -4,7 +4,10 @@ Each provider test is skipped if its SDK is not installed, so the suite runs
 anywhere. The point is to pin the specific bugs the investigation found.
 """
 
+from importlib.metadata import PackageNotFoundError, version
+
 import pytest
+from packaging.version import Version
 
 from tool_schema_doctor.model import ToolRecord, OK, TRANSFORMED, ERROR
 from tool_schema_doctor.compat import run_one
@@ -18,6 +21,13 @@ def _rec(slug, params):
 def _needs(*mods):
     for m in mods:
         pytest.importorskip(m)
+
+
+def _vertex_fix_is_in_installed_release():
+    try:
+        return Version(version("composio-google")) >= Version("0.33.0")
+    except PackageNotFoundError:
+        return False
 
 
 # ---- fixtures: tiny hand-written schemas ----
@@ -53,15 +63,21 @@ BASELINE = {
 def test_vertex_nested_examples_errors():
     _needs("composio_google")
     res = run_one(_rec("NESTED_EX", NESTED_EXAMPLES), "google_vertex")
-    assert res.status == ERROR
-    assert res.schema_path == "/properties/outer/properties/inner/examples"
+    if _vertex_fix_is_in_installed_release():
+        assert res.status in (OK, TRANSFORMED)
+    else:
+        assert res.status == ERROR
+        assert res.schema_path == "/properties/outer/properties/inner/examples"
 
 
 def test_vertex_file_uploadable_errors():
     _needs("composio_google")
     res = run_one(_rec("FU", FILE_UPLOADABLE), "google_vertex")
-    assert res.status == ERROR
-    assert res.schema_path == "/properties/f/file_uploadable"
+    if _vertex_fix_is_in_installed_release():
+        assert res.status in (OK, TRANSFORMED)
+    else:
+        assert res.status == ERROR
+        assert res.schema_path == "/properties/f/file_uploadable"
 
 
 def test_vertex_top_level_examples_is_stripped_not_error():

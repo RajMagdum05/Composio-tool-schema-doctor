@@ -70,11 +70,11 @@ flowchart TD
 
 ## Findings from the analyzed snapshot
 
-The saved evidence uses Composio commit [`6aa3f31`](https://github.com/ComposioHQ/composio/commit/6aa3f31ecf38fc5f9ea10d67e31a43ede2e2c693) and the installed adapter versions recorded in that evidence.
+The table below records the initial analysis of Composio commit [`6aa3f31`](https://github.com/ComposioHQ/composio/commit/6aa3f31ecf38fc5f9ea10d67e31a43ede2e2c693) and the adapter versions used for that run. The online dashboard displays the commit and adapter versions for its latest refresh.
 
 | Check | Observed result | How to read it |
 |---|---:|---|
-| Vertex (`composio_google`) conversion | **6 failures / 930 tools** | Five rejected nested `examples`; one rejected `file_uploadable`. This adapter issue was later fixed upstream in [PR #4751](https://github.com/ComposioHQ/composio/pull/4751), but this project has not rerun the corpus against that fix. |
+| Vertex (`composio_google`) conversion | **6 failures / 930 tools** | Five rejected nested `examples`; one rejected `file_uploadable`. This baseline issue was fixed upstream in [PR #4751](https://github.com/ComposioHQ/composio/pull/4751). The online refresh checks the current source snapshot and installed adapter versions. |
 | OpenAI strict schema conversion | **114 unsupported / 930** | The strict-schema utility marked 114 schemas unsupported; this is different from a provider API call or a live model test. |
 | Gemini (`composio_gemini`) conversion | **1 failure / 930** | The failing tool contains a nested object schema. Successful conversions also dropped `enum` on 179 of the 182 tools that used it. |
 | Missing action hints | **227 / 930 (24.4%)** | These tools in the CLI mock have none of the checked action-hint tags. |
@@ -87,7 +87,7 @@ The saved evidence uses Composio commit [`6aa3f31`](https://github.com/ComposioH
 | CLI mock: `ts/packages/cli/test/__mocks__/tools.json` | **930 tools**, including schemas and tags; GitHub-heavy. | Provider compatibility, schema transformations, and action-hint checks. |
 | Docs catalog: `docs/public/data/toolkits.json` | **84,004 tools** with names and descriptions, but no schemas or tags. | Display-name and description checks only. |
 
-Counts from these two sources have different denominators and must not be combined. The figures above describe checked-in snapshots, **not the live Composio catalog**. Results also depend on the adapter and SDK versions used. See [`tool-schema-doctor/out/evidence/upstream_status.json`](tool-schema-doctor/out/evidence/upstream_status.json) for status notes and sources.
+Counts from these two sources have different denominators and must not be combined. The figures above describe the initial checked-in snapshots, **not the live Composio catalog**. The online dashboard refreshes when the monitored upstream commit changes; each refresh records its snapshot and adapter versions. Results also depend on those adapter and SDK versions. See [`tool-schema-doctor/out/evidence/upstream_status.json`](tool-schema-doctor/out/evidence/upstream_status.json) for historical status notes and sources.
 
 ## Explore the dashboard
 
@@ -150,6 +150,12 @@ Provider SDKs are optional extras. You can install only the adapters you need, s
 The live evaluation requires `GROQ_API_KEY` in the environment. The key is not stored by the project. Compatibility checks and linting need no API keys and make no network calls. For all CLI options and lint rules, see the [CLI guide](tool-schema-doctor/README.md).
 
 To regenerate the saved evidence used by the dashboard, run `python tool-schema-doctor/make_evidence.py` after installing the provider and development extras. To rebuild the static site from that evidence, run `python tool-schema-doctor/build_static.py`; it writes to `site/`.
+
+## Keep the online report current
+
+The GitHub Actions workflow at `.github/workflows/refresh-composio-snapshot.yml` checks Composio's `next` branch every six hours. When it sees a new upstream commit, it checks out the updated fixtures, reruns the compatibility and lint reports plus the regression tests, rebuilds the static dashboard, commits the refreshed evidence to this repository, and deploys it to Netlify. Use **Actions → Refresh Composio snapshot → Run workflow** to request an immediate refresh.
+
+Because this project does not control Composio's GitHub webhooks, updates are polled rather than instant. Netlify publishing requires a `NETLIFY_AUTH_TOKEN` secret in this repository's GitHub Actions settings. The workflow stops before publishing and reports a clear error if that secret is missing. The dashboard records the analyzed Composio commit and installed adapter versions so each refresh remains traceable.
 
 ## Tests and reproducibility
 

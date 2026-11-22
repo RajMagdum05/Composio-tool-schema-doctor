@@ -167,8 +167,7 @@ def ev_vertex() -> str:
     if VERTEX_FIXED:
         note = (f"<div class='note'>Fixed upstream in <a href='{e(VFIX['pr_url'])}' target='_blank' rel='noopener'>#{VFIX['pr']}</a>, "
                 f"merged {e(VFIX['merged_at'][:10])}, replacing the top-level-only stripping with a recursive allowlist. "
-                f"It ships in {e(VFIX['release'])}. Checked {e(UP.get('checked_at', ''))} through the GitHub API. "
-                "Not yet re-run locally against the fix. The evidence below is from the pinned commit.</div>")
+                f"It ships in {e(VFIX['release'])}. The results below reflect the analyzed Composio commit and adapter versions listed above.</div>")
     cause = md("**Cause, in the code.** The adapter removes `examples` only from top-level properties "
                f"([composio_google/provider.py, lines 43 to 60]({gh('python/providers/google/composio_google/provider.py', 'L43-L60')})). "
                "Nested `examples` and `file_uploadable` reach Vertex's schema parser, which rejects unknown fields.")
@@ -180,12 +179,15 @@ def ev_vertex() -> str:
 
 def vertex_card() -> str:
     if VERTEX_FIXED:
-        return card("fixed", f"The Vertex AI adapter rejected {len(vertex_err)} tools. Fixed upstream in #{VFIX['pr']}",
-                    "composio_google (SDK adapter)",
-                    f"On the pinned commit these {len(vertex_err)} tools can't be sent to Vertex AI: building the "
-                    "`FunctionDeclaration` raises `ParseError`. Composio has since merged a fix.",
-                    f"Nothing left to change in code. Upgrade to {VFIX['release'].split(' (')[0]} when it ships and "
-                    "re-run this check; expect 0 Vertex failures.", ev_vertex())
+        if vertex_err:
+            title = f"Vertex still rejects {len(vertex_err)} tools with the analyzed adapter version"
+            impact = (f"The current adapter package still raises while building the `FunctionDeclaration` for "
+                      f"{len(vertex_err)} tools, although Composio merged the fix in #{VFIX['pr']}.")
+        else:
+            title = f"Vertex conversion passes for all {n_tools} tools in this run"
+            impact = f"The fix from Composio PR #{VFIX['pr']} is reflected in the current adapter results."
+        return card("fixed", title, "composio_google (SDK adapter)", impact,
+                    "Keep the adapter package current and rerun this check when Composio schemas change.", ev_vertex())
     return card("high", f"The Vertex AI adapter rejects {len(vertex_err)} tools", "composio_google (SDK adapter)",
                 f"These {len(vertex_err)} tools can't be sent to Vertex AI at all: building the `FunctionDeclaration` raises `ParseError`.",
                 "Strip `examples` and `file_uploadable` at every depth (nested objects and array `items`), not just top-level properties.",
@@ -296,7 +298,7 @@ HERO = f"""
 <div class="navr"><a href="{REPO}/commit/{SHA}" target="_blank" rel="noopener">Composio @ {SHA[:7]}</a><span>{n_tools} tools · 6 adapters</span><span>{tests_txt}</span><span>Evidence {EVD['generated_at'][:10]}</span></div></div>
 <div class="hero"><h1>Find what breaks <span class="hl">before an agent does</span></h1>
 <p>Every Composio tool, run through the real provider adapters, and the tool metadata, checked. Each finding opens to the evidence behind it.</p>
-<div class="btns"><a class="btn" href="#fixes">See what to fix</a><a class="btn ghost" href="#deeper">Check a tool</a></div></div>
+<div class="btns"><a class="btn" href="#fixes">See what to fix</a><a class="btn ghost" href="#tool-check">Check a tool</a></div></div>
 <div class="stats">{stat_html}</div>
 <div class="scope">Schema checks use the 930-tool fixture shipped in Composio's CLI tests, which is GitHub-heavy. Name and description checks use the 84,004-tool docs catalog. These numbers describe those snapshots, not the live catalog.</div>
 </div></div>
@@ -316,19 +318,31 @@ for r in results:
                                               r.get("schema_path") or ""])
 TOOLS_JSON = json.dumps(by_tool, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
 DEFAULT_TOOL = "GOOGLEDRIVE_UPLOAD_FILE" if "GOOGLEDRIVE_UPLOAD_FILE" in by_tool else sorted(by_tool)[0]
+TOOL_CHECKER = f"""
+<section class="tool-check" id="tool-check"><div class="inner">
+<div class="sec">Check a tool</div>
+<p class="sub">Choose a tool to compare how all six provider adapters handle its schema. Results come from the saved full CLI run.</p>
+<label class="tool-picker-label" for="q">Select a tool to inspect adapter behavior</label>
+<select id="q" class="mono" aria-label="Select a tool to inspect adapter behavior">
+{''.join(f'<option value="{e(s, quote=True)}"{" selected" if s == DEFAULT_TOOL else ""}>{e(s)}</option>' for s in sorted(by_tool))}
+</select>
+<div id="out"></div>
+<p class="cap">OK: converts unchanged. Changed: converts, but drops schema keywords the model would otherwise see. Error: the adapter raises.</p>
+<div class="h3">Don't trust the saved run? Re-run this tool live</div>
+<p class="cap">Run it yourself from the repository root with the CLI (needs the Composio checkout and provider SDKs):</p>
+<pre id="cmd"></pre>
+</div></section>
+"""
 
 # ------------------------------------------------------------------ go deeper
 fx = PROV["fixtures"]
 prov_rows = [
     ["Composio source", f"{SHA} ({PROV.get('upstream_commit_date', '')[:10]})", f"<a href='{REPO}/commit/{SHA}' target='_blank' rel='noopener'>commit</a>"],
-    [f"Upstream re-checked {e(UP.get('checked_at', ''))}".strip(),
-     (f"next is {UP.get('next_ahead_by')} commits ahead; in scope only the Vertex adapter changed" if UP else "not checked"),
-     f"<a href='{REPO}/compare/{SHA}...next' target='_blank' rel='noopener'>compare</a>"],
     ["Local checkout modified?", "no" if PROV.get("upstream_dirty_files") == 0 else f"{PROV['upstream_dirty_files']} files", ""],
     ["Schema fixture (930 tools)", f"git blob {fx.get(MOCK, '')[:12]}", f"<a href='{gh(MOCK.split('/', 1)[1])}' target='_blank' rel='noopener'>file</a>"],
     ["Name catalog (84,004 tools)", f"git blob {fx.get(CATALOG, '')[:12]}", f"<a href='{gh(CATALOG.split('/', 1)[1])}' target='_blank' rel='noopener'>file</a>"],
 ]
-prov_rows = [[e(a) if not a.startswith("Upstream re-checked") else a, e(b), c] for a, b, c in prov_rows]
+prov_rows = [[e(a), e(b), c] for a, b, c in prov_rows]
 
 
 def by_rule(rep):
@@ -346,21 +360,9 @@ test_rows = table(["test", "result"], [[k, v] for k, v in sorted(TESTS.items())]
 
 DEEPER = f"""
 <div class="tabs" role="tablist">
-<button class="tab on" role="tab" data-t="tool">Check a tool</button><button class="tab" role="tab" data-t="all">All results</button><button class="tab" role="tab" data-t="how">How we know</button>
+<button class="tab on" role="tab" data-t="all">All results</button><button class="tab" role="tab" data-t="how">How we know</button>
 </div>
-<section class="pane on" id="pane-tool">
-<p>Choose a tool to compare how all six provider adapters handle its schema. Results come from the saved full CLI run.</p>
-<label class="tool-picker-label" for="q">Select a tool to inspect adapter behavior</label>
-<select id="q" class="mono" aria-label="Select a tool to inspect adapter behavior">
-{''.join(f'<option value="{e(s, quote=True)}"{" selected" if s == DEFAULT_TOOL else ""}>{e(s)}</option>' for s in sorted(by_tool))}
-</select>
-<div id="out"></div>
-<p class="cap">OK: converts unchanged. Changed: converts, but drops schema keywords the model would otherwise see. Error: the adapter raises.</p>
-<div class='h3'>Don't trust the saved run? Re-run this tool live</div>
-<p class="cap">Run it yourself from the repository root with the CLI (needs the Composio checkout and the provider SDKs):</p>
-<pre id="cmd"></pre>
-</section>
-<section class="pane" id="pane-all">
+<section class="pane on" id="pane-all">
 <div class='h3'>Every adapter on all {n_tools} tools</div><p class="cap">{e(CMDS['full']['command'])}</p>{all_summary}
 <div class='h3'>Every adapter error</div><p class="cap">Plus {strict_n} OpenAI strict-mode fallbacks, listed in finding 2.</p>{all_errors}
 <div class='h3'>Metadata lint, by rule</div>{lint_tables}
@@ -450,6 +452,7 @@ PAGE = f"""<!doctype html>
 <style>{THEME}{STATIC_CSS}</style>
 </head><body>
 {HERO}
+{TOOL_CHECKER}
 <main class="wrap">
 <div class="sec" id="fixes" style="margin-top:4.4rem">What to fix, <span class="acc">in priority order</span></div>
 <div class="sub">Open Evidence on any item for the affected tools, the raw errors, the upstream code, the command that reproduces it, and the tests that pin it.</div>

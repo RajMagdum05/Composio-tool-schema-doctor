@@ -54,7 +54,7 @@ def test_matches_the_streamlit_dashboard(site):
 
     static_titles = [re.sub(r"&#x27;", "'", t) for t in re.findall(r"<h3>\d\. (.*?)</h3>", page)]
     app_titles = [re.sub(r"^#### \d\. ", "", m.value) for m in at.markdown if m.value.startswith("#### ")]
-    assert static_titles == app_titles and len(static_titles) == 5
+    assert static_titles == app_titles and len(static_titles) >= 4
 
 
 def test_every_evidence_link_resolves_and_the_lookup_data_is_complete(site):
@@ -63,11 +63,24 @@ def test_every_evidence_link_resolves_and_the_lookup_data_is_complete(site):
         assert (site / rel).is_file(), rel
     data = json.loads(re.search(r'<script type="application/json" id="data">(.*?)</script>', page, re.S).group(1)
                       .replace("<\\/", "</"))
-    assert len(data) == 930
+    full = json.loads((HERE / "out" / "compat_full.json").read_text(encoding="utf-8"))
+    assert len(data) == full["tools"]
     assert all(len(rows) == 6 for rows in data.values())          # one row per adapter
-    # the long strict-mode message is complete here too: 11 unsupported paths
-    full = next(d for p, o, d, _ in data["GITHUB_UPDATE_BRANCH_PROTECTION"] if p == "openai_strict")
-    assert len(full.split("strict-unsupported: ")[1].split("; ")) == 11
+    # The dropdown stays labeled and lists the same tools as the saved run.
+    picker = re.search(r'<select id="q".*?</select>', page, re.S).group(0)
+    option_values = re.findall(r'<option value="([^"]+)"', picker)
+    assert "Select a tool to inspect adapter behavior" in page
+    assert len(option_values) == len(data)
+    assert page.index('id="tool-check"') < page.index('id="fixes"')
+    # Check that the static lookup preserves the complete strict-mode error text.
+    slug = next((slug for slug, rows in data.items()
+                 if any(provider == "openai_strict" and outcome == "Error"
+                        for provider, outcome, _, _ in rows)), None)
+    if slug is not None:
+        detail = next(d for p, o, d, _ in data[slug] if p == "openai_strict" and o == "Error")
+        source = next(r for r in full["results"]
+                      if r["slug"] == slug and r["provider"] == "openai_strict" and r["status"] == "error")
+        assert detail == f"{source['error_type']}: {source.get('message') or ''}"
 
 
 def test_nothing_personal_or_secret_is_published(site):

@@ -283,12 +283,56 @@ st.markdown(f"""
 <div class="navr"><a href="{REPO}/commit/{SHA}" target="_blank">Composio @ {SHA[:7]}</a><span>{n_tools} tools · 6 adapters</span><span>{tests_txt}</span><span>Evidence {EVD['generated_at'][:10]}</span></div></div>
 <div class="hero"><h1>Find what breaks <span class="hl">before an agent does</span></h1>
 <p>Every Composio tool, run through the real provider adapters, and the tool metadata, checked. Each finding opens to the evidence behind it.</p>
-<div class="btns"><a class="btn" href="#fixes">See what to fix</a><a class="btn ghost" href="#deeper">Check a tool</a></div></div>
+<div class="btns"><a class="btn" href="#fixes">See what to fix</a><a class="btn ghost" href="#tool-check">Check a tool</a></div></div>
 <div class="stats">{stat_html}</div>
 <div class="scope">Schema checks use the 930-tool fixture shipped in Composio's CLI tests, which is GitHub-heavy. Name and description checks use the 84,004-tool docs catalog. These numbers describe those snapshots, not the live catalog.</div>
 </div></div>
 </div>
 """, unsafe_allow_html=True)
+
+# ================================================================== TOOL CHECKER
+section("Check a tool", "Choose a tool to compare how all six provider adapters handle its schema.", "tool-check")
+slugs = sorted({r["slug"] for r in results})
+default = slugs.index("GOOGLEDRIVE_UPLOAD_FILE") if "GOOGLEDRIVE_UPLOAD_FILE" in slugs else 0
+slug = st.selectbox("Select a tool to inspect adapter behavior", slugs, index=default,
+                    help="Choose a tool to see each adapter's outcome, including any schema changes or errors.")
+outcome = {"ok": "OK", "transformed": "Changed", "error": "Error", "unavailable": "Unavailable"}
+rows = []
+for r in (x for x in results if x["slug"] == slug):
+    if r["status"] == "error":
+        what = f"{r['error_type']} at {r.get('schema_path') or '?'}: {(r.get('message') or '')[:120]}"
+    elif r.get("dropped_keywords"):
+        what = "dropped: " + ", ".join(r["dropped_keywords"])
+    else:
+        what = "unchanged"
+    rows.append({"provider": r["provider"], "outcome": outcome.get(r["status"], r["status"]), "what happened": what})
+st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
+st.caption("OK: converts unchanged. Changed: converts, but drops schema keywords the model would otherwise see. "
+           "Error: the adapter raises.")
+for r in (x for x in results if x["slug"] == slug and x["status"] == "error"):
+    st.markdown(f"**Full `{r['provider']}` error**, exactly as the adapter raised it:")
+    st.code(f"{r['error_type']}: {r.get('message') or ''}", language="text", wrap_lines=True)
+
+heading("Don't trust the saved run? Re-run this tool live")
+live_cmd = f"tool-schema-doctor compatibility --input tool-schema-doctor/out/evidence/live/{slug}.json --verbose"
+st.code(live_cmd, language="bash")
+live_ok = (ROOT / MOCK).is_file() and importlib.util.find_spec("tool_schema_doctor") is not None
+if not live_ok:
+    st.caption("Live re-run needs the Composio checkout and the provider SDKs, so it's available when you run "
+               "this dashboard locally (see the README). The saved results above come from the same CLI.")
+elif st.button("Run it now", key="live"):
+    mock = {t["slug"]: t for t in json.loads((ROOT / MOCK).read_text(encoding="utf-8"))}
+    live = EV / "live" / f"{slug}.json"
+    live.parent.mkdir(parents=True, exist_ok=True)
+    live.write_text(json.dumps([mock[slug]]), encoding="utf-8")
+    with st.spinner("Running the CLI (the first run loads six provider SDKs, about a minute)…"):
+        proc = subprocess.run(
+            [sys.executable, "-m", "tool_schema_doctor.cli", "compatibility",
+             "--input", str(live.relative_to(ROOT)), "--verbose"],
+            cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace",
+            env={**os.environ, "PYTHONIOENCODING": "utf-8"}, timeout=900)
+    st.markdown(f"Exit code `{proc.returncode}`")
+    st.code(proc.stdout or proc.stderr, language="json")
 
 # ================================================================== FIX LIST
 section('What to fix, <span class="acc">in priority order</span>',
@@ -322,8 +366,7 @@ def ev_vertex():
         st.markdown(
             f"<div class='note'>Fixed upstream in {pr_link}, "
             f"merged {VFIX['merged_at'][:10]}, replacing the top-level-only stripping with a recursive allowlist. "
-            f"It ships in {VFIX['release']}. Checked {UPSTREAM.get('checked_at')} through the GitHub API. "
-            "Not yet re-run locally against the fix. The evidence below is from the pinned commit.</div>",
+            f"It ships in {VFIX['release']}. The results below reflect the analyzed Composio commit and adapter versions listed above.</div>",
             unsafe_allow_html=True)
     st.markdown(
         "**Cause, in the code.** The adapter removes `examples` only from top-level properties "
@@ -341,14 +384,15 @@ def ev_vertex():
 
 def show_vertex_card():
     if VERTEX_FIXED:
-        card("fixed",
-             f"The Vertex AI adapter rejected {len(vertex_err)} tools. Fixed upstream in #{VFIX['pr']}",
-             "composio_google (SDK adapter)",
-             f"On the pinned commit these {len(vertex_err)} tools can't be sent to Vertex AI: building the "
-             "`FunctionDeclaration` raises `ParseError`. Composio has since merged a fix.",
-             f"Nothing left to change in code. Upgrade to {VFIX['release'].split(' (')[0]} when it ships and "
-             "re-run this check; expect 0 Vertex failures.",
-             ev_vertex)
+        if vertex_err:
+            title = f"Vertex still rejects {len(vertex_err)} tools with the analyzed adapter version"
+            impact = (f"The current adapter package still raises while building the `FunctionDeclaration` for "
+                      f"{len(vertex_err)} tools, although Composio merged the fix in #{VFIX['pr']}.")
+        else:
+            title = f"Vertex conversion passes for all {n_tools} tools in this run"
+            impact = f"The fix from Composio PR #{VFIX['pr']} is reflected in the current adapter results."
+        card("fixed", title, "composio_google (SDK adapter)", impact,
+             "Keep the adapter package current and rerun this check when Composio schemas change.", ev_vertex)
     else:
         card("high", f"The Vertex AI adapter rejects {len(vertex_err)} tools",
              "composio_google (SDK adapter)",
@@ -477,51 +521,7 @@ if VERTEX_FIXED:
 
 # ================================================================== DETAILS
 section('Go <span class="acc">deeper</span>', "", "deeper")
-tab_tool, tab_all, tab_trust = st.tabs(["Check a tool", "All results", "How we know"])
-
-with tab_tool:
-    st.markdown("Choose a tool to compare how all six provider adapters handle its schema. Results come from the saved full CLI run.")
-    slugs = sorted({r["slug"] for r in results})
-    default = slugs.index("GOOGLEDRIVE_UPLOAD_FILE") if "GOOGLEDRIVE_UPLOAD_FILE" in slugs else 0
-    slug = st.selectbox("Select a tool to inspect adapter behavior", slugs, index=default,
-                        help="Choose a tool to see each adapter's outcome, including any schema changes or errors.")
-    outcome = {"ok": "OK", "transformed": "Changed", "error": "Error", "unavailable": "Unavailable"}
-    rows = []
-    for r in (x for x in results if x["slug"] == slug):
-        if r["status"] == "error":
-            what = f"{r['error_type']} at {r.get('schema_path') or '?'}: {(r.get('message') or '')[:120]}"
-        elif r.get("dropped_keywords"):
-            what = "dropped: " + ", ".join(r["dropped_keywords"])
-        else:
-            what = "unchanged"
-        rows.append({"provider": r["provider"], "outcome": outcome.get(r["status"], r["status"]), "what happened": what})
-    st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
-    st.caption("OK: converts unchanged. Changed: converts, but drops schema keywords the model would otherwise see. "
-               "Error: the adapter raises.")
-    for r in (x for x in results if x["slug"] == slug and x["status"] == "error"):
-        st.markdown(f"**Full `{r['provider']}` error**, exactly as the adapter raised it:")
-        st.code(f"{r['error_type']}: {r.get('message') or ''}", language="text", wrap_lines=True)
-
-    heading("Don't trust the saved run? Re-run this tool live")
-    live_cmd = f"tool-schema-doctor compatibility --input tool-schema-doctor/out/evidence/live/{slug}.json --verbose"
-    st.code(live_cmd, language="bash")
-    live_ok = (ROOT / MOCK).is_file() and importlib.util.find_spec("tool_schema_doctor") is not None
-    if not live_ok:
-        st.caption("Live re-run needs the Composio checkout and the provider SDKs, so it's available when you run "
-                   "this dashboard locally (see the README). The saved results above come from the same CLI.")
-    elif st.button("Run it now", key="live"):
-        mock = {t["slug"]: t for t in json.loads((ROOT / MOCK).read_text(encoding="utf-8"))}
-        live = EV / "live" / f"{slug}.json"
-        live.parent.mkdir(parents=True, exist_ok=True)
-        live.write_text(json.dumps([mock[slug]]), encoding="utf-8")
-        with st.spinner("Running the CLI (the first run loads six provider SDKs, about a minute)…"):
-            proc = subprocess.run(
-                [sys.executable, "-m", "tool_schema_doctor.cli", "compatibility",
-                 "--input", str(live.relative_to(ROOT)), "--verbose"],
-                cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace",
-                env={**os.environ, "PYTHONIOENCODING": "utf-8"}, timeout=900)
-        st.markdown(f"Exit code `{proc.returncode}`")
-        st.code(proc.stdout or proc.stderr, language="json")
+tab_all, tab_trust = st.tabs(["All results", "How we know"])
 
 with tab_all:
     heading(f"Every adapter on all {n_tools} tools")
@@ -547,10 +547,6 @@ with tab_trust:
     st.dataframe(pd.DataFrame([
         {"item": "Composio source", "value": f"{SHA} ({PROV.get('upstream_commit_date', '')[:10]})",
          "check": f"{REPO}/commit/{SHA}"},
-        {"item": f"Upstream re-checked {UPSTREAM.get('checked_at', '')}".strip(),
-         "value": (f"next is {UPSTREAM.get('next_ahead_by')} commits ahead; in scope only the Vertex adapter changed"
-                   if UPSTREAM else "not checked"),
-         "check": f"{REPO}/compare/{SHA}...next"},
         {"item": "Local checkout modified?", "value": "no" if PROV.get("upstream_dirty_files") == 0 else f"{PROV['upstream_dirty_files']} files",
          "check": None},
         {"item": "Schema fixture (930 tools)", "value": f"git blob {fx.get(MOCK, '')[:12]}", "check": gh(MOCK.split('/', 1)[1])},
