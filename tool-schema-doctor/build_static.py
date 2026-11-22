@@ -349,9 +349,11 @@ DEEPER = f"""
 <button class="tab on" role="tab" data-t="tool">Check a tool</button><button class="tab" role="tab" data-t="all">All results</button><button class="tab" role="tab" data-t="how">How we know</button>
 </div>
 <section class="pane on" id="pane-tool">
-<p>Pick any of the {len(by_tool)} tools to see what each adapter does with it. Results come from the saved full CLI run.</p>
-<input id="q" class="mono" list="tools" value="{e(DEFAULT_TOOL)}" autocomplete="off" spellcheck="false" aria-label="Tool name">
-<datalist id="tools">{''.join(f"<option value='{e(s)}'>" for s in sorted(by_tool))}</datalist>
+<p>Choose a tool to compare how all six provider adapters handle its schema. Results come from the saved full CLI run.</p>
+<label class="tool-picker-label" for="q">Select a tool to inspect adapter behavior</label>
+<select id="q" class="mono" aria-label="Select a tool to inspect adapter behavior">
+{''.join(f'<option value="{e(s, quote=True)}"{" selected" if s == DEFAULT_TOOL else ""}>{e(s)}</option>' for s in sorted(by_tool))}
+</select>
 <div id="out"></div>
 <p class="cap">OK: converts unchanged. Changed: converts, but drops schema keywords the model would otherwise see. Error: the adapter raises.</p>
 <div class='h3'>Don't trust the saved run? Re-run this tool live</div>
@@ -398,7 +400,9 @@ a{color:var(--blue);text-underline-offset:2px} .navr a,.btn,.footer a{color:inhe
 .tabs{display:flex;gap:1.6rem;border-bottom:1px solid var(--line);margin:0 0 1.4rem}
 .tab{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;background:none;border:none;border-bottom:2px solid transparent;padding:.7rem 0;cursor:pointer;color:var(--muted)}
 .tab.on{color:var(--ink);border-bottom-color:var(--blue)} .pane{display:none} .pane.on{display:block}
-#q{width:100%;max-width:520px;font-size:.85rem;padding:.7rem .9rem;border:1px solid var(--ink);border-radius:2px;background:#fff;margin:.2rem 0 .8rem}
+#q{display:block;width:100%;max-width:670px;font-size:.85rem;padding:.8rem 2.8rem .8rem .9rem;border:1px solid var(--ink);border-radius:2px;background-color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%230f0f0f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;background-size:1rem;margin:.35rem 0 1.1rem;cursor:pointer;appearance:none;-webkit-appearance:none}
+#q:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tool-picker-label{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:.9rem 0 .2rem}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:2rem} @media(max-width:760px){.two{grid-template-columns:1fr}}
 .ok{color:#17a368}.err{color:#e5484d}.chg{color:#b7791f} td.o{font-family:var(--mono);font-size:.78rem;white-space:nowrap}
 .sec{scroll-margin-top:1rem}
@@ -424,7 +428,7 @@ function show(){
   }
   out.innerHTML = h;
 }
-q.addEventListener('input', show); q.addEventListener('change', show); show();
+q.addEventListener('change', show); show();
 document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === b));
   document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', p.id === 'pane-' + b.dataset.t));

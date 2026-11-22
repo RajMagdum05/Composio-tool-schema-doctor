@@ -480,10 +480,11 @@ section('Go <span class="acc">deeper</span>', "", "deeper")
 tab_tool, tab_all, tab_trust = st.tabs(["Check a tool", "All results", "How we know"])
 
 with tab_tool:
-    st.markdown("Pick any of the 930 tools to see what each adapter does with it. Results come from the saved full CLI run.")
+    st.markdown("Choose a tool to compare how all six provider adapters handle its schema. Results come from the saved full CLI run.")
     slugs = sorted({r["slug"] for r in results})
     default = slugs.index("GOOGLEDRIVE_UPLOAD_FILE") if "GOOGLEDRIVE_UPLOAD_FILE" in slugs else 0
-    slug = st.selectbox("Tool", slugs, index=default)
+    slug = st.selectbox("Select a tool to inspect adapter behavior", slugs, index=default,
+                        help="Choose a tool to see each adapter's outcome, including any schema changes or errors.")
     outcome = {"ok": "OK", "transformed": "Changed", "error": "Error", "unavailable": "Unavailable"}
     rows = []
     for r in (x for x in results if x["slug"] == slug):
