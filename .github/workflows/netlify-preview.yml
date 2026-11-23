@@ -1,0 +1,42 @@
+name: Netlify preview deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: netlify-preview
+  cancel-in-progress: false
+
+jobs:
+  deploy-preview:
+    name: Deploy preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this project
+        uses: actions/checkout@v4
+
+      - name: Check required Netlify secrets
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          missing=()
+          [[ -n "$NETLIFY_AUTH_TOKEN" ]] || missing+=(NETLIFY_AUTH_TOKEN)
+          [[ -n "$NETLIFY_SITE_ID" ]] || missing+=(NETLIFY_SITE_ID)
+          if (( ${#missing[@]} > 0 )); then
+            echo "::error::Add the missing repository Actions secret(s): ${missing[*]}"
+            exit 1
+          fi
+
+      - name: Deploy the existing static site as a preview
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npx --yes netlify-cli@27.19.0 deploy \
+            --dir site \
+            --site "$NETLIFY_SITE_ID" \
+            --message "Manual preview from GitHub Actions"
