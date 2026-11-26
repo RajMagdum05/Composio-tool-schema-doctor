@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-25T21:49:09+00:00",
+  "generated_at": "2026-11-26T08:34:37+00:00",
   "provenance": {
     "upstream_repo": "https://github.com/ComposioHQ/composio",
-    "upstream_commit": "a87c0e190cab2c2f1d3caa62e5613f4e388b2fef",
-    "upstream_commit_date": "2026-11-26T01:18:21+04:00",
-    "upstream_commit_subject": "docs(changelog): CLI 0.6.0 to 0.6.3 releases (#5502)",
+    "upstream_commit": "915440f3acce9831d13a5a712161df5a3ea8d84a",
+    "upstream_commit_date": "2026-11-26T11:06:14+05:30",
+    "upstream_commit_subject": "docs(changelog): tool execution webhooks (#5568)",
     "upstream_dirty_files": 0,
     "fixtures": {
       "composio-upstream/ts/packages/cli/test/__mocks__/tools.json": "b28f3c96499276f5ee0bfde7fc2c8e8021fb45a3",
@@ -18,7 +18,7 @@
       "composio-google": "0.35.0",
       "composio-gemini": "0.35.0",
       "composio-google-adk": "0.35.0",
-      "openai": "3.59.0",
+      "openai": "3.60.0",
       "anthropic": "2.14.0",
       "google-cloud-aiplatform": "2.10.0",
       "google-genai": "2.34.0",
@@ -38,7 +38,7 @@
       "id": "strict",
       "command": "tool-schema-doctor compatibility --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --providers openai_strict",
       "exit_code": 0,
-      "seconds": 2.7,
+      "seconds": 3.9,
       "output_file": "out/evidence/cli/strict.txt"
     },
     "hints": {
@@ -52,43 +52,43 @@
       "id": "names",
       "command": "tool-schema-doctor lint --input composio-upstream/docs/public/data/toolkits.json --rules duplicate-display-name-in-toolkit,description-repeats-name",
       "exit_code": 0,
-      "seconds": 1.6,
+      "seconds": 1.7,
       "output_file": "out/evidence/cli/names.txt"
     },
     "vertex": {
       "id": "vertex",
       "command": "tool-schema-doctor compatibility --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --providers google_vertex",
       "exit_code": 0,
-      "seconds": 5.1,
+      "seconds": 6.8,
       "output_file": "out/evidence/cli/vertex.txt"
     },
     "gemini": {
       "id": "gemini",
       "command": "tool-schema-doctor compatibility --input tool-schema-doctor/out/evidence/gemini_cases.json --providers gemini --verbose",
       "exit_code": 0,
-      "seconds": 3.3,
+      "seconds": 4.1,
       "output_file": "out/evidence/cli/gemini.txt"
     },
     "eval": {
       "id": "eval",
       "command": "tool-schema-doctor eval",
       "exit_code": 0,
-      "seconds": 0.7,
+      "seconds": 0.8,
       "output_file": "out/evidence/cli/eval.txt"
     },
     "full": {
       "id": "full",
       "command": "tool-schema-doctor compatibility --input composio-upstream/ts/packages/cli/test/__mocks__/tools.json --verbose -o tool-schema-doctor/out/compat_full.json",
       "exit_code": 0,
-      "seconds": 20.2
+      "seconds": 21.3
     }
   },
   "gemini_enum_example": "GITHUB_ACTIVITY_LIST_REPO_S_STARRED_BY_AUTHENTICATED_USER",
   "tests": {
     "exit_code": 0,
-    "seconds": 14.4,
+    "seconds": 16.5,
     "junit_file": "out/evidence/test-results.xml",
-    "last_line": "63 passed, 4 warnings in 11.58s",
+    "last_line": "63 passed, 4 warnings in 12.96s",
     "tests": 63,
     "failures": 0,
     "errors": 0,
